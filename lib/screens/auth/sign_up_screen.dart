@@ -1,22 +1,21 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:foodly_ui/screens/auth/sign_in_screen.dart';
 
 import '../../components/buttons/socal_button.dart';
 import '../../components/welcome_text.dart';
 import '../../constants.dart';
-import 'sign_up_screen.dart';
-import 'components/sign_in_form.dart';
+import '../signUp/components/sign_up_form.dart';
 
-class SignInScreen extends StatelessWidget {
-  const SignInScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const SizedBox(),
-        title: const Text("Sign In"),
+        title: const Text("Sign Up"),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -25,39 +24,49 @@ class SignInScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const WelcomeText(
-                title: "Welcome to",
-                text:
-                    "Enter your Phone number or Email \naddress for sign in. Enjoy your food :)",
+                title: "Create Account",
+                text: "Enter your Name, Email and Password \nfor sign up.",
               ),
-              const SignInForm(),
-              const SizedBox(height: defaultPadding),
-              kOrText,
-              const SizedBox(height: defaultPadding * 1.5),
 
+              // Sign Up Form
+              const SignUpForm(),
+              const SizedBox(height: defaultPadding),
+
+              // Already have account
               Center(
                 child: Text.rich(
                   TextSpan(
                     style: Theme.of(context)
                         .textTheme
                         .bodySmall!
-                        .copyWith(fontWeight: FontWeight.w600),
-                    text: "Don’t have account? ",
+                        .copyWith(fontWeight: FontWeight.w500),
+                    text: "Already have account? ",
                     children: <TextSpan>[
                       TextSpan(
-                        text: "Create new account.",
+                        text: "Sign In",
                         style: const TextStyle(color: primaryColor),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () => Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const SignUpScreen(),
+                                  builder: (context) => const SignInScreen(),
                                 ),
                               ),
-                      )
+                      ),
                     ],
                   ),
                 ),
               ),
+              const SizedBox(height: defaultPadding),
+              Center(
+                child: Text(
+                  "By Signing up you agree to our Terms \nConditions & Privacy Policy.",
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+              ),
+              const SizedBox(height: defaultPadding),
+              kOrText,
               const SizedBox(height: defaultPadding),
 
               // Facebook

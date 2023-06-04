@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
-import '../../../size_config.dart';
-import '../../../components/buttons/primary_button.dart';
-import '../../phoneLogin/phone_login_screen.dart';
 
 class SignUpForm extends StatefulWidget {
   const SignUpForm({super.key});
@@ -13,33 +10,9 @@ class SignUpForm extends StatefulWidget {
 }
 
 class _SignUpFormState extends State<SignUpForm> {
-  // Note: This is a `GlobalKey<FormState>`,
-  // not a GlobalKey<MyCustomFormState>.
   final _formKey = GlobalKey<FormState>();
 
   bool _obscureText = true;
-
-  FocusNode? _emaildNode;
-  FocusNode? _passwordNode;
-  FocusNode? _conformPasswordNode;
-
-  String? _fullName, _email, _password, _conformPassword;
-
-  @override
-  void initState() {
-    super.initState();
-    _passwordNode = FocusNode();
-    _emaildNode = FocusNode();
-    _conformPasswordNode = FocusNode();
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    _passwordNode!.dispose();
-    _emaildNode!.dispose();
-    _conformPasswordNode!.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -50,57 +23,33 @@ class _SignUpFormState extends State<SignUpForm> {
           // Full Name Field
           TextFormField(
             validator: requiredValidator,
-            onSaved: (value) => _fullName = value,
+            onSaved: (value) {},
             textInputAction: TextInputAction.next,
-            onEditingComplete: () {
-              // Once user click on Next then it go to email field
-              _emaildNode!.requestFocus();
-            },
-            style: kSecondaryBodyTextStyle,
-            cursorColor: primaryColor,
-            decoration: InputDecoration(
-              hintText: "Full Name",
-              contentPadding: kTextFieldPadding,
-            ),
+            decoration: const InputDecoration(hintText: "Full Name"),
           ),
           const SizedBox(height: defaultPadding),
 
           // Email Field
           TextFormField(
-            focusNode: _emaildNode,
             validator: emailValidator,
-            onSaved: (value) => _email = value,
+            onSaved: (value) {},
             textInputAction: TextInputAction.next,
-            onEditingComplete: () {
-              // Once user click on Next then it go to password field
-              _passwordNode!.requestFocus();
-            },
-            style: kSecondaryBodyTextStyle,
-            cursorColor: primaryColor,
             keyboardType: TextInputType.emailAddress,
-            decoration: InputDecoration(
-              hintText: "Email Address",
-              contentPadding: kTextFieldPadding,
-            ),
+            decoration: const InputDecoration(hintText: "Email Address"),
           ),
           const SizedBox(height: defaultPadding),
 
           // Password Field
           TextFormField(
-            focusNode: _passwordNode,
             obscureText: _obscureText,
-
             validator: passwordValidator,
             textInputAction: TextInputAction.next,
-            onEditingComplete: () => _conformPasswordNode!.requestFocus(),
             // We need to validate our password
-            onChanged: (value) => _password = value,
-            onSaved: (value) => _password = value,
-            style: kSecondaryBodyTextStyle,
-            cursorColor: primaryColor,
+            onChanged: (value) {},
+            onSaved: (value) {},
+
             decoration: InputDecoration(
               hintText: "Password",
-              contentPadding: kTextFieldPadding,
               suffixIcon: GestureDetector(
                 onTap: () {
                   setState(() {
@@ -117,16 +66,9 @@ class _SignUpFormState extends State<SignUpForm> {
 
           // Confirm Password Field
           TextFormField(
-            focusNode: _conformPasswordNode,
             obscureText: _obscureText,
-            validator: (value) =>
-                matchValidator.validateMatch(value!, _password!),
-            onSaved: (value) => _conformPassword = value,
-            style: kSecondaryBodyTextStyle,
-            cursorColor: primaryColor,
             decoration: InputDecoration(
               hintText: "Confirm Password",
-              contentPadding: kTextFieldPadding,
               suffixIcon: GestureDetector(
                 onTap: () {
                   setState(() {
@@ -141,20 +83,9 @@ class _SignUpFormState extends State<SignUpForm> {
           ),
           const SizedBox(height: defaultPadding),
           // Sign Up Button
-          PrimaryButton(
-            text: "Sign Up",
-            press: () {
-              if (_formKey.currentState!.validate()) {
-                // If all data are correct then save data to out variables
-                _formKey.currentState!.save();
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const PghoneLoginScreen(),
-                  ),
-                );
-              } else {}
-            },
+          ElevatedButton(
+            onPressed: () {},
+            child: const Text("Sign Up"),
           ),
         ],
       ),
