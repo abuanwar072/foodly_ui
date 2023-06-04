@@ -53,7 +53,7 @@ class RestaurantInfoBigCard extends StatelessWidget {
               const HorizontalSpacing(of: 5),
               Text("$deliveryTime Min", style: kCaptionTextStyle),
               const Padding(
-                padding: EdgeInsets.symmetric(horizontal: kDefaultPadding / 2),
+                padding: EdgeInsets.symmetric(horizontal: defaultPadding / 2),
                 child: SmallDot(),
               ),
               SvgPicture.asset(

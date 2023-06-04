@@ -27,9 +27,9 @@ class _CategoriesState extends State<Categories> {
         ),
         const VerticalSpacing(of: 20),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
           child: Wrap(
-            spacing: kDefaultPadding / 2,
+            spacing: defaultPadding / 2,
             children: List.generate(
               demoCategories.length,
               (index) => FittedButton(

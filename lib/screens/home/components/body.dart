@@ -63,7 +63,7 @@ class Body extends StatelessWidget {
               3,
               (index) => Padding(
                 padding: const EdgeInsets.fromLTRB(
-                    kDefaultPadding, 0, kDefaultPadding, kDefaultPadding),
+                    defaultPadding, 0, defaultPadding, defaultPadding),
                 child: RestaurantInfoBigCard(
                   // Images are List<String>
                   images: demoBigImages..shuffle(),

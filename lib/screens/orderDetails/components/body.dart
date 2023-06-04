@@ -12,7 +12,7 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+        padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
         child: Column(
           children: [
             const VerticalSpacing(),
@@ -21,7 +21,7 @@ class Body extends StatelessWidget {
               demoItems.length,
               (index) => Padding(
                 padding:
-                    const EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
+                    const EdgeInsets.symmetric(vertical: defaultPadding / 2),
                 child: OrderedItemCard(
                   title: demoItems[index]["title"],
                   description:

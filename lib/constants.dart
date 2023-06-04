@@ -9,6 +9,9 @@ const accentColor = Color(0xFFEF9920);
 const bodyTextColor = Color(0xFF868686);
 const inputColor = Color(0xFFFBFBFB);
 
+const double defaultPadding = 16;
+const Duration kDefaultDuration = Duration(milliseconds: 250);
+
 // Text Styles
 final TextStyle kH1TextStyle = TextStyle(
   fontSize: getProportionateScreenWidth(34),
@@ -64,15 +67,10 @@ final TextStyle kCaptionTextStyle = TextStyle(
   fontWeight: FontWeight.w600,
 );
 
-// padding
-const double kDefaultPadding = 20.0;
 final EdgeInsets kTextFieldPadding = EdgeInsets.symmetric(
-  horizontal: kDefaultPadding,
-  vertical: getProportionateScreenHeight(kDefaultPadding),
+  horizontal: defaultPadding,
+  vertical: getProportionateScreenHeight(defaultPadding),
 );
-
-// Default Animation Duration
-const Duration kDefaultDuration = Duration(milliseconds: 250);
 
 // Text Field Decoration
 const OutlineInputBorder kDefaultOutlineInputBorder = OutlineInputBorder(

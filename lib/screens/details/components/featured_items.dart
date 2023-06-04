@@ -15,7 +15,7 @@ class FeaturedItems extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
           child: Text("Featured Items", style: kSubHeadTextStyle),
         ),
         const VerticalSpacing(of: 10),
@@ -26,7 +26,7 @@ class FeaturedItems extends StatelessWidget {
               ...List.generate(
                 3, // for demo we use 3
                 (index) => Padding(
-                  padding: const EdgeInsets.only(left: kDefaultPadding - 5),
+                  padding: const EdgeInsets.only(left: defaultPadding - 5),
                   child: FeaturedItemCard(
                     title: "Cookie Sandwich",
                     image: "assets/images/featured _items_${index + 1}.png",

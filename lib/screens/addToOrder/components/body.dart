@@ -32,7 +32,7 @@ class _BodyState extends State<Body> {
             const Info(),
             const VerticalSpacing(),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+              padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -81,7 +81,7 @@ class _BodyState extends State<Body> {
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(
-                            horizontal: kDefaultPadding),
+                            horizontal: defaultPadding),
                         child: Text(numOfItems.toString().padLeft(2, "0"),
                             style: kSubHeadTextStyle),
                       ),

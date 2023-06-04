@@ -22,13 +22,13 @@ class PriceRange extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              const SizedBox(width: kDefaultPadding),
+              const SizedBox(width: defaultPadding),
               ...List.generate(
                 // For demo i'm using length 5
                 5, // Price limit
                 (index) => Padding(
                   padding: EdgeInsets.only(
-                      right: getProportionateScreenWidth(kDefaultPadding)),
+                      right: getProportionateScreenWidth(defaultPadding)),
                   child: RoundedButton(
                     index: index,
                     isActive: index == 2, // for demo just select 3rd item

@@ -22,8 +22,8 @@ class RequiredSectionTitle extends StatelessWidget {
         ),
         Container(
           padding: const EdgeInsets.symmetric(
-            horizontal: kDefaultPadding / 2,
-            vertical: kDefaultPadding / 4,
+            horizontal: defaultPadding / 2,
+            vertical: defaultPadding / 4,
           ),
           decoration: BoxDecoration(
               color: accentColor.withOpacity(0.2),

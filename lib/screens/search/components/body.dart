@@ -46,7 +46,7 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+        padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -62,7 +62,7 @@ class _BodyState extends State<Body> {
               child: ListView.builder(
                 itemCount: _isLoading ? 2 : 5, //5 is demo length of your data
                 itemBuilder: (context, index) => Padding(
-                  padding: const EdgeInsets.only(bottom: kDefaultPadding),
+                  padding: const EdgeInsets.only(bottom: defaultPadding),
                   child: _isLoading
                       ? const BigCardScalton()
                       : RestaurantInfoBigCard(

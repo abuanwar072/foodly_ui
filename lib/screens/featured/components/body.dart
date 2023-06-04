@@ -31,12 +31,12 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+        padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
         child: ListView.builder(
           // while we dont have our data bydefault we show 3 scalton
           itemCount: isLoading ? 3 : demoDataLength,
           itemBuilder: (context, index) => Padding(
-            padding: const EdgeInsets.only(bottom: kDefaultPadding),
+            padding: const EdgeInsets.only(bottom: defaultPadding),
             child: isLoading
                 ? const BigCardScalton()
                 : RestaurantInfoBigCard(

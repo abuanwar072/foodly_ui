@@ -23,7 +23,7 @@ class Info extends StatelessWidget {
         ),
         const VerticalSpacing(),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

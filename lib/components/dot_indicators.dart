@@ -14,8 +14,6 @@ class DotIndicator extends StatelessWidget {
   final bool isActive;
   final Color activeColor, inActiveColor;
 
-  // Color bla = Colors.grey[300];
-
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(

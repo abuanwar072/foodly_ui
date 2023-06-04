@@ -33,7 +33,7 @@ class _ItemsState extends State<Items> {
           demoData.length,
           (index) => Padding(
             padding: const EdgeInsets.symmetric(
-                horizontal: kDefaultPadding - 5, vertical: kDefaultPadding / 2),
+                horizontal: defaultPadding - 5, vertical: defaultPadding / 2),
             child: ItemCard(
               title: demoData[index]["title"],
               description: demoData[index]["description"],

@@ -16,7 +16,7 @@ class ResetEmailSentScreen extends StatelessWidget {
         title: const Text("Forgot Password"),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+        padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

@@ -37,7 +37,7 @@ final InputDecorationTheme inputDecorationTheme = InputDecorationTheme(
   fillColor: inputColor,
   filled: true,
   // hintStyle: kBodyTextStyle,
-  contentPadding: const EdgeInsets.all(kDefaultPadding),
+  contentPadding: const EdgeInsets.all(defaultPadding),
   border: kDefaultOutlineInputBorder,
   enabledBorder: kDefaultOutlineInputBorder,
   focusedBorder: kDefaultOutlineInputBorder.copyWith(

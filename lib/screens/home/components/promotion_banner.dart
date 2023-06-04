@@ -27,7 +27,7 @@ class _PromotionBannerState extends State<PromotionBanner> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+      padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
       child: isLoading
           ? const AspectRatio(
               aspectRatio: 1.97,

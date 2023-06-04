@@ -11,7 +11,7 @@ class Body extends StatelessWidget {
     return SafeArea(
       child: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -81,7 +81,7 @@ class ProfileMenuCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
+      padding: const EdgeInsets.symmetric(vertical: defaultPadding / 2),
       child: InkWell(
         borderRadius: const BorderRadius.all(Radius.circular(8)),
         onTap: press,

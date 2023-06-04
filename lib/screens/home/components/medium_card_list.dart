@@ -44,8 +44,8 @@ class _MediumCardListState extends State<MediumCardList> {
                   itemCount: data.length,
                   itemBuilder: (context, index) => Padding(
                     padding: EdgeInsets.only(
-                      left: kDefaultPadding,
-                      right: (data.length - 1) == index ? kDefaultPadding : 0,
+                      left: defaultPadding,
+                      right: (data.length - 1) == index ? defaultPadding : 0,
                     ),
                     child: RestaurantInfoMediumCard(
                       image: data[index]['image'],
@@ -69,7 +69,7 @@ class _MediumCardListState extends State<MediumCardList> {
         children: List.generate(
           2,
           (index) => const Padding(
-            padding: EdgeInsets.only(left: kDefaultPadding),
+            padding: EdgeInsets.only(left: defaultPadding),
             child: MediumCardScalton(),
           ),
         ),
