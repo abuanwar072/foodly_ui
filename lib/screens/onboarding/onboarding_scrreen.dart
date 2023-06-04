@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodly_ui/constants.dart';
 import 'package:foodly_ui/size_config.dart';
 
 import '../../components/dot_indicators.dart';
@@ -47,16 +48,19 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               ),
             ),
             const Spacer(flex: 2),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const SignInScreen(),
-                  ),
-                );
-              },
-              child: Text("Get Started".toUpperCase()),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SignInScreen(),
+                    ),
+                  );
+                },
+                child: Text("Get Started".toUpperCase()),
+              ),
             ),
             const Spacer(),
           ],
