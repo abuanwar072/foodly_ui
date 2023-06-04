@@ -36,11 +36,11 @@ class SectionTitle extends StatelessWidget {
                   ? Theme.of(context)
                       .textTheme
                       .bodyMedium!
-                      .copyWith(color: kActiveColor)
+                      .copyWith(color: primaryColor)
                   : TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
-                      color: kMainColor.withOpacity(0.64),
+                      color: titleColor.withOpacity(0.64),
                     ),
             ),
           ),

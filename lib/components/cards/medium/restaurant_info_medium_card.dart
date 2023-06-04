@@ -58,13 +58,13 @@ class RestaurantInfoMediumCard extends StatelessWidget {
                 Text(
                   "$delivertTime min",
                   style: kSecondaryBodyTextStyle.copyWith(
-                      color: kMainColor.withOpacity(0.74)),
+                      color: titleColor.withOpacity(0.74)),
                 ),
                 const SmallDot(),
                 Text(
                   "Free delivery",
                   style: kSecondaryBodyTextStyle.copyWith(
-                      color: kMainColor.withOpacity(0.74)),
+                      color: titleColor.withOpacity(0.74)),
                 )
               ],
             )

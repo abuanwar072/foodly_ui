@@ -62,7 +62,7 @@ class _BodyState extends State<Body> {
                         SvgPicture.asset(
                           "assets/icons/location.svg",
                           height: 24,
-                          color: kActiveColor,
+                          color: primaryColor,
                         ),
                         const HorizontalSpacing(of: 10),
                         Text(
@@ -70,7 +70,7 @@ class _BodyState extends State<Body> {
                           style: Theme.of(context)
                               .textTheme
                               .bodyMedium!
-                              .copyWith(color: kActiveColor),
+                              .copyWith(color: primaryColor),
                         )
                       ],
                     ),
@@ -86,14 +86,14 @@ class _BodyState extends State<Body> {
                     style: Theme.of(context)
                         .textTheme
                         .bodyMedium!
-                        .copyWith(color: kMainColor),
-                    cursorColor: kActiveColor,
+                        .copyWith(color: titleColor),
+                    cursorColor: primaryColor,
                     decoration: InputDecoration(
                       prefixIcon: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: SvgPicture.asset(
                           "assets/icons/marker.svg",
-                          color: kBodyTextColor,
+                          color: bodyTextColor,
                         ),
                       ),
                       hintText: "Enter a new address",

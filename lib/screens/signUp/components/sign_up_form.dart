@@ -57,7 +57,7 @@ class _SignUpFormState extends State<SignUpForm> {
               _emaildNode!.requestFocus();
             },
             style: kSecondaryBodyTextStyle,
-            cursorColor: kActiveColor,
+            cursorColor: primaryColor,
             decoration: InputDecoration(
               hintText: "Full Name",
               contentPadding: kTextFieldPadding,
@@ -76,7 +76,7 @@ class _SignUpFormState extends State<SignUpForm> {
               _passwordNode!.requestFocus();
             },
             style: kSecondaryBodyTextStyle,
-            cursorColor: kActiveColor,
+            cursorColor: primaryColor,
             keyboardType: TextInputType.emailAddress,
             decoration: InputDecoration(
               hintText: "Email Address",
@@ -97,7 +97,7 @@ class _SignUpFormState extends State<SignUpForm> {
             onChanged: (value) => _password = value,
             onSaved: (value) => _password = value,
             style: kSecondaryBodyTextStyle,
-            cursorColor: kActiveColor,
+            cursorColor: primaryColor,
             decoration: InputDecoration(
               hintText: "Password",
               contentPadding: kTextFieldPadding,
@@ -108,8 +108,8 @@ class _SignUpFormState extends State<SignUpForm> {
                   });
                 },
                 child: _obscureText
-                    ? const Icon(Icons.visibility_off, color: kBodyTextColor)
-                    : const Icon(Icons.visibility, color: kBodyTextColor),
+                    ? const Icon(Icons.visibility_off, color: bodyTextColor)
+                    : const Icon(Icons.visibility, color: bodyTextColor),
               ),
             ),
           ),
@@ -123,7 +123,7 @@ class _SignUpFormState extends State<SignUpForm> {
                 matchValidator.validateMatch(value!, _password!),
             onSaved: (value) => _conformPassword = value,
             style: kSecondaryBodyTextStyle,
-            cursorColor: kActiveColor,
+            cursorColor: primaryColor,
             decoration: InputDecoration(
               hintText: "Confirm Password",
               contentPadding: kTextFieldPadding,
@@ -134,8 +134,8 @@ class _SignUpFormState extends State<SignUpForm> {
                   });
                 },
                 child: _obscureText
-                    ? const Icon(Icons.visibility_off, color: kBodyTextColor)
-                    : const Icon(Icons.visibility, color: kBodyTextColor),
+                    ? const Icon(Icons.visibility_off, color: bodyTextColor)
+                    : const Icon(Icons.visibility, color: bodyTextColor),
               ),
             ),
           ),

@@ -111,7 +111,7 @@ class _BodyState extends State<Body> {
             padding: const EdgeInsets.all(8.0),
             child: SvgPicture.asset(
               'assets/icons/search.svg',
-              color: kBodyTextColor,
+              color: bodyTextColor,
             ),
           ),
         ),

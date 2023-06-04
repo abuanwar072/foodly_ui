@@ -41,8 +41,8 @@ class _BodyState extends State<Body> {
                 style: Theme.of(context)
                     .textTheme
                     .bodyMedium!
-                    .copyWith(color: kMainColor),
-                cursorColor: kActiveColor,
+                    .copyWith(color: titleColor),
+                cursorColor: primaryColor,
                 keyboardType: TextInputType.phone,
                 decoration: InputDecoration(
                   hintText: "Phone Number",
@@ -55,11 +55,11 @@ class _BodyState extends State<Body> {
                         // Save your country code
                       },
                       padding: const EdgeInsets.only(right: 5),
-                      textStyle: const TextStyle(color: kMainColor),
+                      textStyle: const TextStyle(color: titleColor),
                       initialSelection: "US",
                       showCountryOnly: false,
-                      searchDecoration:
-                          const InputDecoration(contentPadding: EdgeInsets.zero),
+                      searchDecoration: const InputDecoration(
+                          contentPadding: EdgeInsets.zero),
                     ),
                   ),
                 ),

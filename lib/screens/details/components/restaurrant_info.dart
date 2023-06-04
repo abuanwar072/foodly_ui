@@ -50,7 +50,7 @@ class RestaurantInfo extends StatelessWidget {
                 child: SeconderyButton(
                   child: Text(
                     "Take away".toUpperCase(),
-                    style: kCaptionTextStyle.copyWith(color: kActiveColor),
+                    style: kCaptionTextStyle.copyWith(color: primaryColor),
                   ),
                   press: () {},
                 ),
@@ -70,7 +70,7 @@ class RestaurantInfo extends StatelessWidget {
           iconSrc,
           height: getProportionateScreenWidth(20),
           width: getProportionateScreenWidth(20),
-          color: kActiveColor,
+          color: primaryColor,
         ),
         const HorizontalSpacing(of: 10),
         Text.rich(

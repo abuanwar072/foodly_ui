@@ -20,7 +20,7 @@ class _ItemsState extends State<Items> {
           length: demoTabs.length,
           child: TabBar(
             isScrollable: true,
-            unselectedLabelColor: kMainColor.withOpacity(0.54),
+            unselectedLabelColor: titleColor.withOpacity(0.54),
             labelStyle: kH3TextStyle,
             onTap: (value) {
               // you will get selected tab index

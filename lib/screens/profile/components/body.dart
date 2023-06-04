@@ -93,7 +93,7 @@ class ProfileMenuCard extends StatelessWidget {
                 svgSrc!,
                 height: 24,
                 width: 24,
-                color: kMainColor.withOpacity(0.64),
+                color: titleColor.withOpacity(0.64),
               ),
               const HorizontalSpacing(of: 10),
               Expanded(
@@ -111,7 +111,7 @@ class ProfileMenuCard extends StatelessWidget {
                       maxLines: 1,
                       style: TextStyle(
                         fontSize: 14,
-                        color: kMainColor.withOpacity(0.54),
+                        color: titleColor.withOpacity(0.54),
                       ),
                     ),
                   ],

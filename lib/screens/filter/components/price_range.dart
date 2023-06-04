@@ -63,12 +63,13 @@ class RoundedButton extends StatelessWidget {
       width: getProportionateScreenWidth(64),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.zero, backgroundColor: isActive ? kActiveColor : kInputColor,
+          padding: EdgeInsets.zero,
+          backgroundColor: isActive ? primaryColor : inputColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(100),
             side: BorderSide(
                 color:
-                    isActive ? kActiveColor : kBodyTextColor.withOpacity(0.1)),
+                    isActive ? primaryColor : bodyTextColor.withOpacity(0.1)),
           ),
         ),
         onPressed: press,
@@ -76,7 +77,7 @@ class RoundedButton extends StatelessWidget {
           "\$" * (index + 1),
           style: TextStyle(
               fontWeight: FontWeight.normal,
-              color: isActive ? Colors.white : kMainColor,
+              color: isActive ? Colors.white : titleColor,
               fontSize: getProportionateScreenWidth(14)),
         ),
       ),

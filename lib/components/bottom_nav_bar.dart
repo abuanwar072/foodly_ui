@@ -51,8 +51,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
           });
         },
         currentIndex: _selectedIndex,
-        activeColor: kActiveColor,
-        inactiveColor: kBodyTextColor,
+        activeColor: primaryColor,
+        inactiveColor: bodyTextColor,
         items: List.generate(
           _navitems.length,
           (index) => BottomNavigationBarItem(
@@ -71,7 +71,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
       src,
       height: 30,
       width: 30,
-      color: isActive ? kActiveColor : kBodyTextColor,
+      color: isActive ? primaryColor : bodyTextColor,
     );
   }
 }

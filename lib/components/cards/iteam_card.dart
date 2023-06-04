@@ -23,7 +23,7 @@ class ItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextStyle textStyle = kSecondaryBodyTextStyle.copyWith(
-      color: kMainColor.withOpacity(0.64),
+      color: titleColor.withOpacity(0.64),
       fontWeight: FontWeight.normal,
     );
     return InkWell(
@@ -79,7 +79,7 @@ class ItemCard extends StatelessWidget {
                         Text(
                           "USD$price",
                           style: kSecondaryBodyTextStyle.copyWith(
-                              color: kActiveColor),
+                              color: primaryColor),
                         )
                       ],
                     ),

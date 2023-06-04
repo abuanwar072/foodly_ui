@@ -52,7 +52,7 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
             validator: emailValidator,
             onSaved: (value) => _email = value,
             style: kSecondaryBodyTextStyle,
-            cursorColor: kActiveColor,
+            cursorColor: primaryColor,
             keyboardType: TextInputType.emailAddress,
             decoration: InputDecoration(
               hintText: "Email Address",

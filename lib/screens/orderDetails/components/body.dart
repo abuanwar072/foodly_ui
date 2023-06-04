@@ -55,7 +55,7 @@ class Body extends StatelessWidget {
           TextSpan(
             text: "Total ",
             style: kBodyTextStyle.copyWith(
-                color: kMainColor, fontWeight: FontWeight.w500),
+                color: titleColor, fontWeight: FontWeight.w500),
             children: const [
               TextSpan(
                 text: "(incl. VAT)",
@@ -67,7 +67,7 @@ class Body extends StatelessWidget {
         Text(
           "\$$price",
           style: kBodyTextStyle.copyWith(
-              color: kMainColor, fontWeight: FontWeight.w500),
+              color: titleColor, fontWeight: FontWeight.w500),
         ),
       ],
     );
@@ -79,11 +79,11 @@ class Body extends StatelessWidget {
       children: [
         Text(
           text,
-          style: kBodyTextStyle.copyWith(color: kMainColor),
+          style: kBodyTextStyle.copyWith(color: titleColor),
         ),
         Text(
           "\$$price",
-          style: kBodyTextStyle.copyWith(color: kMainColor),
+          style: kBodyTextStyle.copyWith(color: titleColor),
         )
       ],
     );

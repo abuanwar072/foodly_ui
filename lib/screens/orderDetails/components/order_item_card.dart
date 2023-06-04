@@ -48,7 +48,7 @@ class OrderedItemCard extends StatelessWidget {
             const HorizontalSpacing(of: 10),
             Text(
               "USD$price",
-              style: kCaptionTextStyle.copyWith(color: kActiveColor),
+              style: kCaptionTextStyle.copyWith(color: primaryColor),
             )
           ],
         ),
@@ -65,12 +65,12 @@ class OrderedItemCard extends StatelessWidget {
       alignment: Alignment.center,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(Radius.circular(4)),
-        border:
-            Border.all(width: 0.5, color: const Color(0xFF868686).withOpacity(0.3)),
+        border: Border.all(
+            width: 0.5, color: const Color(0xFF868686).withOpacity(0.3)),
       ),
       child: Text(
         numOfItem.toString(),
-        style: kSecondaryBodyTextStyle.copyWith(color: kActiveColor),
+        style: kSecondaryBodyTextStyle.copyWith(color: primaryColor),
       ),
     );
   }

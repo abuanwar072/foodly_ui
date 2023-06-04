@@ -21,14 +21,14 @@ class FittedButton extends StatelessWidget {
       style: TextButton.styleFrom(
         padding: EdgeInsets.symmetric(
             horizontal: getProportionateScreenWidth(kDefaultPadding) * 1.5),
-        backgroundColor: isActive! ? kActiveColor : const Color(0xFFF1F1F1),
+        backgroundColor: isActive! ? primaryColor : const Color(0xFFF1F1F1),
       ),
       onPressed: press,
       child: Text(
         text!.toUpperCase(),
         style: TextStyle(
           fontSize: 12,
-          color: isActive! ? Colors.white : kMainColor.withOpacity(0.54),
+          color: isActive! ? Colors.white : titleColor.withOpacity(0.54),
           fontWeight: FontWeight.w500,
         ),
       ),

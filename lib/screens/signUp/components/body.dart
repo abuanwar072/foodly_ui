@@ -42,7 +42,7 @@ class Body extends StatelessWidget {
                     children: <TextSpan>[
                       TextSpan(
                         text: "Sign In",
-                        style: const TextStyle(color: kActiveColor),
+                        style: const TextStyle(color: primaryColor),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () => Navigator.push(
                                 context,

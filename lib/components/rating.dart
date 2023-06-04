@@ -15,7 +15,7 @@ class Rating extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
       decoration: const BoxDecoration(
-        color: kActiveColor,
+        color: primaryColor,
         borderRadius: BorderRadius.all(Radius.circular(6)),
       ),
       child: Text(

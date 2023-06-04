@@ -3,12 +3,11 @@ import 'package:foodly_ui/size_config.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 
 // clolors that we use in our app
-const kMainColor = Color(0xFF010F07);
-const kActiveColor = Color(0xFF22A45D);
-const kAccentColor = Color(0xFFEF9920);
-const kBodyTextColor = Color(0xFF868686);
-const kInputColor = Color(0xFFFBFBFB);
-const kBgColor = Colors.white;
+const titleColor = Color(0xFF010F07);
+const primaryColor = Color(0xFF22A45D);
+const accentColor = Color(0xFFEF9920);
+const bodyTextColor = Color(0xFF868686);
+const inputColor = Color(0xFFFBFBFB);
 
 // Text Styles
 final TextStyle kH1TextStyle = TextStyle(
@@ -36,20 +35,20 @@ final TextStyle kHeadlineTextStyle = TextStyle(
 final TextStyle kSubHeadTextStyle = TextStyle(
   fontSize: getProportionateScreenWidth(20),
   fontWeight: FontWeight.w500,
-  color: kMainColor,
+  color: titleColor,
   letterSpacing: 0.44,
 );
 
 final TextStyle kBodyTextStyle = TextStyle(
   fontSize: getProportionateScreenWidth(16),
-  color: kBodyTextColor,
+  color: bodyTextColor,
   height: 1.5,
 );
 
 final TextStyle kSecondaryBodyTextStyle = TextStyle(
   fontSize: getProportionateScreenWidth(14),
   fontWeight: FontWeight.w500,
-  color: kMainColor,
+  color: titleColor,
   // height: 1.5,
 );
 
@@ -60,7 +59,7 @@ final TextStyle kButtonTextStyle = TextStyle(
 );
 
 final TextStyle kCaptionTextStyle = TextStyle(
-  color: kMainColor.withOpacity(0.64),
+  color: titleColor.withOpacity(0.64),
   fontSize: getProportionateScreenWidth(12),
   fontWeight: FontWeight.w600,
 );
@@ -78,7 +77,7 @@ const Duration kDefaultDuration = Duration(milliseconds: 250);
 // Text Field Decoration
 const OutlineInputBorder kDefaultOutlineInputBorder = OutlineInputBorder(
   borderRadius: BorderRadius.all(Radius.circular(6)),
-  borderSide: BorderSide(
+  borderSide: const BorderSide(
     color: Color(0xFFF3F2F2),
   ),
 );
@@ -113,4 +112,4 @@ final phoneNumberValidator = MinLengthValidator(10,
 
 // Common Text
 final Center kOrText = Center(
-    child: Text("Or", style: TextStyle(color: kMainColor.withOpacity(0.7))));
+    child: Text("Or", style: TextStyle(color: titleColor.withOpacity(0.7))));

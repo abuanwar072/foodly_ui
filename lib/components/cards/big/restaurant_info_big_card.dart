@@ -48,13 +48,12 @@ class RestaurantInfoBigCard extends StatelessWidget {
                 "assets/icons/clock.svg",
                 height: getProportionateScreenWidth(20),
                 width: getProportionateScreenWidth(20),
-                color: kMainColor.withOpacity(0.64),
+                color: titleColor.withOpacity(0.64),
               ),
               const HorizontalSpacing(of: 5),
               Text("$deliveryTime Min", style: kCaptionTextStyle),
               const Padding(
-                padding:
-                    EdgeInsets.symmetric(horizontal: kDefaultPadding / 2),
+                padding: EdgeInsets.symmetric(horizontal: kDefaultPadding / 2),
                 child: SmallDot(),
               ),
               SvgPicture.asset(
@@ -72,4 +71,3 @@ class RestaurantInfoBigCard extends StatelessWidget {
     );
   }
 }
-

@@ -20,7 +20,7 @@ class Body extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const WelcomeText( 
+            const WelcomeText(
               title: "Welcome to",
               text:
                   "Enter your Phone number or Email \naddress for sign in. Enjoy your food :)",
@@ -44,7 +44,7 @@ class Body extends StatelessWidget {
                   children: <TextSpan>[
                     TextSpan(
                       text: "Create new account.",
-                      style: const TextStyle(color: kActiveColor),
+                      style: const TextStyle(color: primaryColor),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () => Navigator.push(
                               context,

@@ -20,7 +20,7 @@ class FeaturedItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextStyle textStyle = kSecondaryBodyTextStyle.copyWith(
-      color: kMainColor.withOpacity(0.64),
+      color: titleColor.withOpacity(0.64),
       fontWeight: FontWeight.normal,
     );
     return InkWell(
@@ -47,7 +47,7 @@ class FeaturedItemCard extends StatelessWidget {
               Text(
                 title,
                 style: kBodyTextStyle.copyWith(
-                    color: kMainColor, fontWeight: FontWeight.w500),
+                    color: titleColor, fontWeight: FontWeight.w500),
               ),
               const VerticalSpacing(of: 5),
               Row(

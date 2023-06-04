@@ -26,11 +26,11 @@ class RequiredSectionTitle extends StatelessWidget {
             vertical: kDefaultPadding / 4,
           ),
           decoration: BoxDecoration(
-              color: kAccentColor.withOpacity(0.2),
+              color: accentColor.withOpacity(0.2),
               borderRadius: const BorderRadius.all(Radius.circular(4))),
           child: Text(
             "Required".toUpperCase(),
-            style: kCaptionTextStyle.copyWith(color: kAccentColor),
+            style: kCaptionTextStyle.copyWith(color: accentColor),
           ),
         )
       ],

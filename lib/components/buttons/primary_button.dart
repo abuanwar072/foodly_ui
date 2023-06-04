@@ -21,14 +21,14 @@ class PrimaryButton extends StatelessWidget {
       child: Platform.isIOS
           ? CupertinoButton(
               padding: verticalPadding,
-              color: kActiveColor,
+              color: primaryColor,
               onPressed: press,
               child: buildText(context),
             )
           : ElevatedButton(
               style: TextButton.styleFrom(
                 padding: verticalPadding,
-                backgroundColor: kActiveColor,
+                backgroundColor: primaryColor,
               ),
               onPressed: press,
               child: buildText(context),

@@ -53,7 +53,7 @@ class _SignInFormState extends State<SignInForm> {
               _passwordNode!.requestFocus();
             },
             style: kSecondaryBodyTextStyle,
-            cursorColor: kActiveColor,
+            cursorColor: primaryColor,
             keyboardType: TextInputType.emailAddress,
             decoration: InputDecoration(
               hintText: "Email Address",
@@ -69,7 +69,7 @@ class _SignInFormState extends State<SignInForm> {
             validator: passwordValidator,
             onSaved: (value) => password = value,
             style: kSecondaryBodyTextStyle,
-            cursorColor: kActiveColor,
+            cursorColor: primaryColor,
             decoration: InputDecoration(
               hintText: "Password",
               contentPadding: kTextFieldPadding,
@@ -80,8 +80,8 @@ class _SignInFormState extends State<SignInForm> {
                   });
                 },
                 child: _obscureText
-                    ? const Icon(Icons.visibility_off, color: kBodyTextColor)
-                    : const Icon(Icons.visibility, color: kBodyTextColor),
+                    ? const Icon(Icons.visibility_off, color: bodyTextColor)
+                    : const Icon(Icons.visibility, color: bodyTextColor),
               ),
             ),
           ),
