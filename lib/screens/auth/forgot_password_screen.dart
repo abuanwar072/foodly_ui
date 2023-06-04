@@ -53,13 +53,8 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
           TextFormField(
             validator: emailValidator,
             onSaved: (value) {},
-            style: kSecondaryBodyTextStyle,
-            cursorColor: primaryColor,
             keyboardType: TextInputType.emailAddress,
-            decoration: InputDecoration(
-              hintText: "Email Address",
-              contentPadding: kTextFieldPadding,
-            ),
+            decoration: const InputDecoration(hintText: "Email Address"),
           ),
           const SizedBox(height: defaultPadding),
 
