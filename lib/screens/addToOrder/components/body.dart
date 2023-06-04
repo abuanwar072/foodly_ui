@@ -10,6 +10,8 @@ import 'rounded_button.dart';
 import 'rounded_checkedbox_list_tile.dart';
 
 class Body extends StatefulWidget {
+  const Body({super.key});
+
   @override
   _BodyState createState() => _BodyState();
 }
@@ -27,15 +29,15 @@ class _BodyState extends State<Body> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Info(),
-            VerticalSpacing(),
+            const Info(),
+            const VerticalSpacing(),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  RequiredSectionTitle(title: "Choice of top Cookie"),
-                  VerticalSpacing(),
+                  const RequiredSectionTitle(title: "Choice of top Cookie"),
+                  const VerticalSpacing(),
                   ...List.generate(
                     choiceOfTopCookies.length,
                     (index) => RoundedCheckboxListTile(
@@ -48,9 +50,9 @@ class _BodyState extends State<Body> {
                       },
                     ),
                   ),
-                  VerticalSpacing(),
-                  RequiredSectionTitle(title: "Choice of Bottom Cookie"),
-                  VerticalSpacing(),
+                  const VerticalSpacing(),
+                  const RequiredSectionTitle(title: "Choice of Bottom Cookie"),
+                  const VerticalSpacing(),
                   ...List.generate(
                     choiceOfTopCookies.length,
                     (index) => RoundedCheckboxListTile(
@@ -63,7 +65,7 @@ class _BodyState extends State<Body> {
                       },
                     ),
                   ),
-                  VerticalSpacing(),
+                  const VerticalSpacing(),
                   // Num of item
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -86,29 +88,30 @@ class _BodyState extends State<Body> {
                       // decrement buuton
                       RoundedButton(
                         press: () {
-                          if (numOfItems > 1)
+                          if (numOfItems > 1) {
                             setState(() {
                               numOfItems--;
                             });
+                          }
                         },
                         iconData: Icons.remove,
                       ),
                     ],
                   ),
-                  VerticalSpacing(),
+                  const VerticalSpacing(),
                   PrimaryButton(
                     text: "Add to Order (\$11.98)",
                     press: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => OrderDetailsScreen(),
+                        builder: (context) => const OrderDetailsScreen(),
                       ),
                     ),
                   )
                 ],
               ),
             ),
-            VerticalSpacing()
+            const VerticalSpacing()
           ],
         ),
       ),

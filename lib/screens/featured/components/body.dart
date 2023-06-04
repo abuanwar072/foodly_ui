@@ -7,6 +7,8 @@ import '../../../demoData.dart';
 
 /// Just for show the scalton we use [StatefulWidget]
 class Body extends StatefulWidget {
+  const Body({super.key});
+
   @override
   _BodyState createState() => _BodyState();
 }
@@ -18,7 +20,7 @@ class _BodyState extends State<Body> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 1), () {
+    Future.delayed(const Duration(seconds: 1), () {
       setState(() {
         isLoading = false;
       });
@@ -36,7 +38,7 @@ class _BodyState extends State<Body> {
           itemBuilder: (context, index) => Padding(
             padding: const EdgeInsets.only(bottom: kDefaultPadding),
             child: isLoading
-                ? BigCardScalton()
+                ? const BigCardScalton()
                 : RestaurantInfoBigCard(
                     // Images are List<String>
                     images: demoBigImages..shuffle(),
@@ -44,7 +46,7 @@ class _BodyState extends State<Body> {
                     rating: 4.3,
                     numOfRating: 200,
                     deliveryTime: 25,
-                    foodType: ["Chinese", "American", "Deshi food"],
+                    foodType: const ["Chinese", "American", "Deshi food"],
                     press: () {},
                   ),
           ),

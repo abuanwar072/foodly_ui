@@ -5,11 +5,13 @@ import '../search/search_screen.dart';
 import 'components/body.dart';
 
 class DetailsScreen extends StatelessWidget {
+  const DetailsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(context),
-      body: Body(),
+      body: const Body(),
     );
   }
 
@@ -25,7 +27,7 @@ class DetailsScreen extends StatelessWidget {
           onPressed: () => Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => SearchScreen(),
+              builder: (context) => const SearchScreen(),
             ),
           ),
         ),

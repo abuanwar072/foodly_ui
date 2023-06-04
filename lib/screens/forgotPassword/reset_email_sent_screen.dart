@@ -7,22 +7,24 @@ import '../../components/welcome_text.dart';
 import '../../size_config.dart';
 
 class ResetEmailSentScreen extends StatelessWidget {
+  const ResetEmailSentScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Forgot Password"),
+        title: const Text("Forgot Password"),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            WelcomeText(
+            const WelcomeText(
                 title: "Reset email sent",
                 text:
                     "We have sent a instructions email to \ntheflutterway@email.com."),
-            VerticalSpacing(),
+            const VerticalSpacing(),
             PrimaryButton(
               text: "Send again",
               press: () {},

@@ -7,10 +7,12 @@ import '../../../size_config.dart';
 import '../reset_email_sent_screen.dart';
 
 class Body extends StatelessWidget {
+  const Body({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -57,7 +59,7 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
               contentPadding: kTextFieldPadding,
             ),
           ),
-          VerticalSpacing(),
+          const VerticalSpacing(),
 
           // Reset password Button
           PrimaryButton(
@@ -69,7 +71,7 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ResetEmailSentScreen(),
+                      builder: (context) => const ResetEmailSentScreen(),
                     ));
               } else {}
             },

@@ -6,19 +6,21 @@ import '../../size_config.dart';
 import 'components/body.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     /// If you set your home screen as first screen make sure call [SizeConfig().init(context)]
     SizeConfig().init(context);
     return Scaffold(
       appBar: buildAppBar(context),
-      body: Body(),
+      body: const Body(),
     );
   }
 
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
-      leading: SizedBox(),
+      leading: const SizedBox(),
       title: Column(
         children: [
           Text(
@@ -28,7 +30,7 @@ class HomeScreen extends StatelessWidget {
                 .bodySmall!
                 .copyWith(color: kActiveColor),
           ),
-          Text(
+          const Text(
             "San Francisco",
             style: TextStyle(color: Colors.black),
           )
@@ -40,7 +42,7 @@ class HomeScreen extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => FilterScreen(),
+                builder: (context) => const FilterScreen(),
               ),
             );
           },

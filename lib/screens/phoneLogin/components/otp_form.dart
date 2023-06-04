@@ -118,7 +118,7 @@ class _OtpFormState extends State<OtpForm> {
               ),
             ],
           ),
-          VerticalSpacing(of: 40),
+          const VerticalSpacing(of: 40),
           // Continue Button
           PrimaryButton(
             text: "Continue",
@@ -129,7 +129,7 @@ class _OtpFormState extends State<OtpForm> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => BottomNavBar(),
+                    builder: (context) => const BottomNavBar(),
                   ),
                 );
               } else {}

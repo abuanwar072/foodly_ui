@@ -43,13 +43,13 @@ class FeaturedItemCard extends StatelessWidget {
                   ),
                 ),
               ),
-              VerticalSpacing(of: 5),
+              const VerticalSpacing(of: 5),
               Text(
                 title,
                 style: kBodyTextStyle.copyWith(
                     color: kMainColor, fontWeight: FontWeight.w500),
               ),
-              VerticalSpacing(of: 5),
+              const VerticalSpacing(of: 5),
               Row(
                 children: [
                   Text(
@@ -59,7 +59,7 @@ class FeaturedItemCard extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.symmetric(
                         horizontal: getProportionateScreenWidth(5)),
-                    child: SmallDot(),
+                    child: const SmallDot(),
                   ),
                   Text(foodType, style: textStyle)
                 ],

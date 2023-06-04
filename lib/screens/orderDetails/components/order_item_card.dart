@@ -23,7 +23,7 @@ class OrderedItemCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             buildNumOfItem(),
-            HorizontalSpacing(of: 10),
+            const HorizontalSpacing(of: 10),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,7 +35,7 @@ class OrderedItemCard extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-                  VerticalSpacing(of: 5),
+                  const VerticalSpacing(of: 5),
                   Text(
                     description!,
                     style: kBodyTextStyle.copyWith(),
@@ -45,15 +45,15 @@ class OrderedItemCard extends StatelessWidget {
                 ],
               ),
             ),
-            HorizontalSpacing(of: 10),
+            const HorizontalSpacing(of: 10),
             Text(
               "USD$price",
               style: kCaptionTextStyle.copyWith(color: kActiveColor),
             )
           ],
         ),
-        VerticalSpacing(of: 10),
-        Divider(),
+        const VerticalSpacing(of: 10),
+        const Divider(),
       ],
     );
   }
@@ -64,9 +64,9 @@ class OrderedItemCard extends StatelessWidget {
       width: 24,
       alignment: Alignment.center,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(4)),
+        borderRadius: const BorderRadius.all(Radius.circular(4)),
         border:
-            Border.all(width: 0.5, color: Color(0xFF868686).withOpacity(0.3)),
+            Border.all(width: 0.5, color: const Color(0xFF868686).withOpacity(0.3)),
       ),
       child: Text(
         numOfItem.toString(),

@@ -7,11 +7,13 @@ import '../../size_config.dart';
 import 'components/otp_form.dart';
 
 class NumberVerifyScreen extends StatelessWidget {
+  const NumberVerifyScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login to Foodly"),
+        title: const Text("Login to Foodly"),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -19,14 +21,14 @@ class NumberVerifyScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              WelcomeText(
+              const WelcomeText(
                 title: "Verify phone number",
                 text: "Enter the 4-Digit code sent to you at \n+1501333982",
               ),
 
               // OTP form
-              OtpForm(),
-              VerticalSpacing(),
+              const OtpForm(),
+              const VerticalSpacing(),
               Center(
                 child: Text.rich(
                   TextSpan(
@@ -38,7 +40,7 @@ class NumberVerifyScreen extends StatelessWidget {
                     children: <TextSpan>[
                       TextSpan(
                         text: "Resend Again.",
-                        style: TextStyle(color: kActiveColor),
+                        style: const TextStyle(color: kActiveColor),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
                             // Your OTP PIN resend code
@@ -48,14 +50,14 @@ class NumberVerifyScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              VerticalSpacing(),
-              Center(
+              const VerticalSpacing(),
+              const Center(
                 child: Text(
                   "By Signing up you agree to our Terms \nConditions & Privacy Policy.",
                   textAlign: TextAlign.center,
                 ),
               ),
-              VerticalSpacing(),
+              const VerticalSpacing(),
             ],
           ),
         ),

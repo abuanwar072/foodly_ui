@@ -22,7 +22,7 @@ class BigCardImageSlideScalton extends StatelessWidget {
           bottom: getProportionateScreenWidth(15),
           right: getProportionateScreenWidth(15),
           child: Row(
-            children: List.generate(4, (index) => DotIndicator()),
+            children: List.generate(4, (index) => const DotIndicator()),
           ),
         ),
       ],

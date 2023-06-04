@@ -32,10 +32,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
 // Screens
   final List<Widget> _screens = [
-    HomeScreen(),
-    SearchScreen(),
-    OrderDetailsScreen(),
-    ProfileScreen(),
+    const HomeScreen(),
+    const SearchScreen(),
+    const OrderDetailsScreen(),
+    const ProfileScreen(),
   ];
 
   @override

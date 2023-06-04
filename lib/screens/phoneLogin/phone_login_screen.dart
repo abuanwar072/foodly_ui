@@ -3,13 +3,15 @@ import 'package:flutter/material.dart';
 import 'components/body.dart';
 
 class PghoneLoginScreen extends StatelessWidget {
+  const PghoneLoginScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login to Foodly"),
+        title: const Text("Login to Foodly"),
       ),
-      body: Body(),
+      body: const Body(),
     );
   }
 }

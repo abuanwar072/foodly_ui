@@ -63,7 +63,7 @@ class _SignUpFormState extends State<SignUpForm> {
               contentPadding: kTextFieldPadding,
             ),
           ),
-          VerticalSpacing(),
+          const VerticalSpacing(),
 
           // Email Field
           TextFormField(
@@ -83,7 +83,7 @@ class _SignUpFormState extends State<SignUpForm> {
               contentPadding: kTextFieldPadding,
             ),
           ),
-          VerticalSpacing(),
+          const VerticalSpacing(),
 
           // Password Field
           TextFormField(
@@ -113,7 +113,7 @@ class _SignUpFormState extends State<SignUpForm> {
               ),
             ),
           ),
-          VerticalSpacing(),
+          const VerticalSpacing(),
 
           // Confirm Password Field
           TextFormField(
@@ -139,7 +139,7 @@ class _SignUpFormState extends State<SignUpForm> {
               ),
             ),
           ),
-          VerticalSpacing(),
+          const VerticalSpacing(),
           // Sign Up Button
           PrimaryButton(
             text: "Sign Up",
@@ -150,7 +150,7 @@ class _SignUpFormState extends State<SignUpForm> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => PghoneLoginScreen(),
+                    builder: (context) => const PghoneLoginScreen(),
                   ),
                 );
               } else {}

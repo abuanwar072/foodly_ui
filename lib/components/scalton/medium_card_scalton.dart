@@ -13,7 +13,7 @@ class MediumCardScalton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: getProportionateScreenWidth(200),
-      child: Column(
+      child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AspectRatio(
@@ -21,11 +21,11 @@ class MediumCardScalton extends StatelessWidget {
             child: ScaltonRoundedContainer(),
           ),
           VerticalSpacing(of: 10),
-          const ScaltonLine(width: 150),
+          ScaltonLine(width: 150),
           VerticalSpacing(of: 10),
-          const ScaltonLine(),
+          ScaltonLine(),
           VerticalSpacing(of: 10),
-          const ScaltonLine(),
+          ScaltonLine(),
         ],
       ),
     );

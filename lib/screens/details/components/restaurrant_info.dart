@@ -24,13 +24,13 @@ class RestaurantInfo extends StatelessWidget {
             style: kH2TextStyle,
             maxLines: 1,
           ),
-          VerticalSpacing(of: 10),
-          PriceRangeAndFoodtype(
+          const VerticalSpacing(of: 10),
+          const PriceRangeAndFoodtype(
             foodType: ["Chinese", "American", "Deshi food"],
           ),
-          VerticalSpacing(of: 10),
-          RatingWithCounter(rating: 4.3, numOfRating: 200),
-          VerticalSpacing(),
+          const VerticalSpacing(of: 10),
+          const RatingWithCounter(rating: 4.3, numOfRating: 200),
+          const VerticalSpacing(),
           Row(
             children: [
               buildDeliveryInfo(
@@ -38,13 +38,13 @@ class RestaurantInfo extends StatelessWidget {
                 text: "Free",
                 subText: "Delivery",
               ),
-              HorizontalSpacing(),
+              const HorizontalSpacing(),
               buildDeliveryInfo(
                 iconSrc: "assets/icons/clock.svg",
                 text: "25",
                 subText: "Minutes",
               ),
-              Spacer(),
+              const Spacer(),
               SizedBox(
                 width: getProportionateScreenWidth(115),
                 child: SeconderyButton(
@@ -72,7 +72,7 @@ class RestaurantInfo extends StatelessWidget {
           width: getProportionateScreenWidth(20),
           color: kActiveColor,
         ),
-        HorizontalSpacing(of: 10),
+        const HorizontalSpacing(of: 10),
         Text.rich(
           TextSpan(
             text: "$text\n",

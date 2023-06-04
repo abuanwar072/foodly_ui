@@ -33,11 +33,11 @@ class RestaurantInfoMediumCard extends StatelessWidget {
             AspectRatio(
               aspectRatio: 1.25,
               child: ClipRRect(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
+                borderRadius: const BorderRadius.all(Radius.circular(10)),
                 child: Image.asset(image!, fit: BoxFit.cover),
               ),
             ),
-            VerticalSpacing(of: 10),
+            const VerticalSpacing(of: 10),
             Text(
               name!,
               maxLines: 1,
@@ -49,7 +49,7 @@ class RestaurantInfoMediumCard extends StatelessWidget {
               maxLines: 1,
               style: kBodyTextStyle,
             ),
-            VerticalSpacing(of: 10),
+            const VerticalSpacing(of: 10),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -60,7 +60,7 @@ class RestaurantInfoMediumCard extends StatelessWidget {
                   style: kSecondaryBodyTextStyle.copyWith(
                       color: kMainColor.withOpacity(0.74)),
                 ),
-                SmallDot(),
+                const SmallDot(),
                 Text(
                   "Free delivery",
                   style: kSecondaryBodyTextStyle.copyWith(

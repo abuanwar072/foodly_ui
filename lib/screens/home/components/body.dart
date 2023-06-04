@@ -12,6 +12,8 @@ import '../../featured/featurred_screen.dart';
 import 'medium_card_list.dart';
 
 class Body extends StatelessWidget {
+  const Body({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -19,41 +21,41 @@ class Body extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            VerticalSpacing(of: 10),
+            const VerticalSpacing(of: 10),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: BigCardImageSlide(images: demoBigImages),
             ),
-            VerticalSpacing(of: 25),
+            const VerticalSpacing(of: 25),
             SectionTitle(
               title: "Featured Partners",
               press: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => FeaturedScreen(),
+                  builder: (context) => const FeaturedScreen(),
                 ),
               ),
             ),
-            VerticalSpacing(of: 15),
-            MediumCardList(),
-            VerticalSpacing(of: 25),
+            const VerticalSpacing(of: 15),
+            const MediumCardList(),
+            const VerticalSpacing(of: 25),
             // Banner
-            PromotionBanner(),
-            VerticalSpacing(of: 25),
+            const PromotionBanner(),
+            const VerticalSpacing(of: 25),
             SectionTitle(
               title: "Best Pick",
               press: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => FeaturedScreen(),
+                  builder: (context) => const FeaturedScreen(),
                 ),
               ),
             ),
-            VerticalSpacing(of: 15),
-            MediumCardList(),
-            VerticalSpacing(of: 25),
+            const VerticalSpacing(of: 15),
+            const MediumCardList(),
+            const VerticalSpacing(of: 25),
             SectionTitle(title: "All Restaurants", press: () {}),
-            VerticalSpacing(of: 15),
+            const VerticalSpacing(of: 15),
 
             // Demo list of Big Cards
             ...List.generate(
@@ -69,11 +71,11 @@ class Body extends StatelessWidget {
                   rating: 4.3,
                   numOfRating: 200,
                   deliveryTime: 25,
-                  foodType: ["Chinese", "American", "Deshi food"],
+                  foodType: const ["Chinese", "American", "Deshi food"],
                   press: () => Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => DetailsScreen(),
+                      builder: (context) => const DetailsScreen(),
                     ),
                   ),
                 ),

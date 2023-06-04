@@ -21,14 +21,14 @@ class RatingWithCounter extends StatelessWidget {
     return Row(
       children: [
         Text(rating.toString(), style: textStyle),
-        HorizontalSpacing(of: 5),
+        const HorizontalSpacing(of: 5),
         SvgPicture.asset(
           "assets/icons/rating.svg",
           height: getProportionateScreenWidth(20),
           width: getProportionateScreenWidth(20),
           color: kActiveColor,
         ),
-        HorizontalSpacing(of: 5),
+        const HorizontalSpacing(of: 5),
         Text("$numOfRating+ Ratings", style: textStyle),
       ],
     );

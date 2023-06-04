@@ -38,7 +38,7 @@ class _SignInFormState extends State<SignInForm> {
 
   @override
   Widget build(BuildContext context) {
-    String? _email, _password;
+    String? email, password;
     return Form(
       key: _formKey,
       child: Column(
@@ -46,7 +46,7 @@ class _SignInFormState extends State<SignInForm> {
           // Email Field
           TextFormField(
             validator: emailValidator,
-            onSaved: (value) => _email = value,
+            onSaved: (value) => email = value,
             textInputAction: TextInputAction.next,
             onEditingComplete: () {
               // Once user click on Next then it go to password field
@@ -60,14 +60,14 @@ class _SignInFormState extends State<SignInForm> {
               contentPadding: kTextFieldPadding,
             ),
           ),
-          VerticalSpacing(),
+          const VerticalSpacing(),
 
           // Password Field
           TextFormField(
             focusNode: _passwordNode,
             obscureText: _obscureText,
             validator: passwordValidator,
-            onSaved: (value) => _password = value,
+            onSaved: (value) => password = value,
             style: kSecondaryBodyTextStyle,
             cursorColor: kActiveColor,
             decoration: InputDecoration(
@@ -85,14 +85,14 @@ class _SignInFormState extends State<SignInForm> {
               ),
             ),
           ),
-          VerticalSpacing(),
+          const VerticalSpacing(),
 
           // Forget Password
           GestureDetector(
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => ForgotPasswordScreen(),
+                builder: (context) => const ForgotPasswordScreen(),
               ),
             ),
             child: Text(
@@ -103,7 +103,7 @@ class _SignInFormState extends State<SignInForm> {
                   .copyWith(fontWeight: FontWeight.w500),
             ),
           ),
-          VerticalSpacing(),
+          const VerticalSpacing(),
 
           // Sign In Button
           PrimaryButton(
@@ -117,7 +117,7 @@ class _SignInFormState extends State<SignInForm> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => BottomNavBar(),
+                      builder: (context) => const BottomNavBar(),
                     ));
               } else {}
             },

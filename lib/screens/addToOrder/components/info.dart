@@ -21,20 +21,20 @@ class Info extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        VerticalSpacing(),
+        const VerticalSpacing(),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text("Cookie Sandwich", style: kH3TextStyle),
-              VerticalSpacing(of: 5),
+              const VerticalSpacing(of: 5),
               Text(
                 "Shortbread, chocolate turtle cookies, and red velvet. 8 ounces cream cheese, softened.",
                 style: kBodyTextStyle,
               ),
-              VerticalSpacing(of: 10),
-              PriceRangeAndFoodtype(
+              const VerticalSpacing(of: 10),
+              const PriceRangeAndFoodtype(
                 foodType: ["Chinese", "American", "Deshi food"],
               ),
             ],

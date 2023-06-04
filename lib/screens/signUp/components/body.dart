@@ -10,6 +10,8 @@ import '../../../components/buttons/socal_button.dart';
 import 'sign_up_form.dart';
 
 class Body extends StatelessWidget {
+  const Body({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -19,14 +21,14 @@ class Body extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              WelcomeText(
+              const WelcomeText(
                 title: "Create Account",
                 text: "Enter your Name, Email and Password \nfor sign up.",
               ),
 
               // Sign Up Form
-              SignUpForm(),
-              VerticalSpacing(of: 20),
+              const SignUpForm(),
+              const VerticalSpacing(of: 20),
 
               // Already have account
               Center(
@@ -40,12 +42,12 @@ class Body extends StatelessWidget {
                     children: <TextSpan>[
                       TextSpan(
                         text: "Sign In",
-                        style: TextStyle(color: kActiveColor),
+                        style: const TextStyle(color: kActiveColor),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () => Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => SignInScreen(),
+                                  builder: (context) => const SignInScreen(),
                                 ),
                               ),
                       ),
@@ -53,7 +55,7 @@ class Body extends StatelessWidget {
                   ),
                 ),
               ),
-              VerticalSpacing(of: 20),
+              const VerticalSpacing(of: 20),
               Center(
                 child: Text(
                   "By Signing up you agree to our Terms \nConditions & Privacy Policy.",
@@ -61,32 +63,32 @@ class Body extends StatelessWidget {
                   style: kBodyTextStyle,
                 ),
               ),
-              VerticalSpacing(of: 15),
+              const VerticalSpacing(of: 15),
               kOrText,
-              VerticalSpacing(of: 15),
+              const VerticalSpacing(of: 15),
 
               // Facebook
               SocalButton(
                 press: () {},
                 text: "Connect with Facebook",
-                color: Color(0xFF395998),
+                color: const Color(0xFF395998),
                 icon: SvgPicture.asset(
                   'assets/icons/facebook.svg',
-                  color: Color(0xFF395998),
+                  color: const Color(0xFF395998),
                 ),
               ),
-              VerticalSpacing(of: 15),
+              const VerticalSpacing(of: 15),
 
               // Google
               SocalButton(
                 press: () {},
                 text: "Connect with Google",
-                color: Color(0xFF4285F4),
+                color: const Color(0xFF4285F4),
                 icon: SvgPicture.asset(
                   'assets/icons/google.svg',
                 ),
               ),
-              VerticalSpacing(),
+              const VerticalSpacing(),
             ],
           ),
         ),

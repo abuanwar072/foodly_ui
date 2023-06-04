@@ -13,10 +13,10 @@ class Rating extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-      decoration: BoxDecoration(
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+      decoration: const BoxDecoration(
         color: kActiveColor,
-        borderRadius: const BorderRadius.all(Radius.circular(6)),
+        borderRadius: BorderRadius.all(Radius.circular(6)),
       ),
       child: Text(
         rating.toString(),

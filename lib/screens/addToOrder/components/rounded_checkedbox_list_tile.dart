@@ -27,7 +27,7 @@ class RoundedCheckboxListTile extends StatelessWidget {
             child: Row(
               children: [
                 CircleCheckBox(isActive: isActive),
-                HorizontalSpacing(of: 10),
+                const HorizontalSpacing(of: 10),
                 Text(
                   text,
                   style: kBodyTextStyle.copyWith(
@@ -37,7 +37,7 @@ class RoundedCheckboxListTile extends StatelessWidget {
             ),
           ),
         ),
-        Divider(),
+        const Divider(),
       ],
     );
   }
@@ -63,11 +63,11 @@ class CircleCheckBox extends StatelessWidget {
         border: Border.all(
           color: isActive
               ? kActiveColor.withOpacity(0.54)
-              : Color(0xFF868686).withOpacity(0.54),
+              : const Color(0xFF868686).withOpacity(0.54),
           width: 0.8,
         ),
       ),
-      child: DecoratedBox(
+      child: const DecoratedBox(
         decoration: BoxDecoration(
           color: kActiveColor,
           shape: BoxShape.circle,

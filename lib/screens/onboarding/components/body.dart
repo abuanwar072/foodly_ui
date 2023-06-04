@@ -7,6 +7,8 @@ import '../../../components/dot_indicators.dart';
 import 'onboard_content.dart';
 
 class Body extends StatefulWidget {
+  const Body({super.key});
+
   @override
   _BodyState createState() => _BodyState();
 }
@@ -19,7 +21,7 @@ class _BodyState extends State<Body> {
     return SafeArea(
       child: Column(
         children: [
-          Spacer(flex: 2),
+          const Spacer(flex: 2),
           Expanded(
             flex: 14,
             child: PageView.builder(
@@ -36,26 +38,26 @@ class _BodyState extends State<Body> {
               ),
             ),
           ),
-          Spacer(),
+          const Spacer(),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: List.generate(demoData.length,
                 (index) => DotIndicator(isActive: index == currentPage)),
           ),
-          Spacer(flex: 2),
+          const Spacer(flex: 2),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
             child: PrimaryButton(
               press: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => SignInScreen(),
+                  builder: (context) => const SignInScreen(),
                 ),
               ),
               text: "Get Started",
             ),
           ),
-          Spacer(),
+          const Spacer(),
         ],
       ),
     );

@@ -4,6 +4,8 @@ import 'package:foodly_ui/constants.dart';
 import 'package:foodly_ui/size_config.dart';
 
 class Body extends StatelessWidget {
+  const Body({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -13,13 +15,13 @@ class Body extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              VerticalSpacing(),
+              const VerticalSpacing(),
               Text("Account Settings", style: kH2TextStyle),
               Text(
                 "Update your settings like notifications, payments, profile edit etc.",
                 style: kBodyTextStyle,
               ),
-              VerticalSpacing(of: 10),
+              const VerticalSpacing(of: 10),
               ProfileMenuCard(
                 svgSrc: "assets/icons/profile.svg",
                 title: "Profile Information",
@@ -93,7 +95,7 @@ class ProfileMenuCard extends StatelessWidget {
                 width: 24,
                 color: kMainColor.withOpacity(0.64),
               ),
-              HorizontalSpacing(of: 10),
+              const HorizontalSpacing(of: 10),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -103,7 +105,7 @@ class ProfileMenuCard extends StatelessWidget {
                       maxLines: 1,
                       style: kSecondaryBodyTextStyle,
                     ),
-                    VerticalSpacing(of: 5),
+                    const VerticalSpacing(of: 5),
                     Text(
                       subTitle!,
                       maxLines: 1,
@@ -115,8 +117,8 @@ class ProfileMenuCard extends StatelessWidget {
                   ],
                 ),
               ),
-              HorizontalSpacing(of: 10),
-              Icon(
+              const HorizontalSpacing(of: 10),
+              const Icon(
                 Icons.arrow_forward_ios_outlined,
                 size: 20,
               )

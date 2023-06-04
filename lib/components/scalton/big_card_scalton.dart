@@ -14,18 +14,18 @@ class BigCardScalton extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        AspectRatio(
+        const AspectRatio(
           aspectRatio: 1.81,
           child: BigCardImageSlideScalton(),
         ),
-        VerticalSpacing(of: 10),
+        const VerticalSpacing(of: 10),
         ScaltonLine(
           width: SizeConfig.screenWidth * 0.8,
         ),
-        VerticalSpacing(of: 10),
-        ScaltonLine(),
-        VerticalSpacing(of: 10),
-        ScaltonLine(),
+        const VerticalSpacing(of: 10),
+        const ScaltonLine(),
+        const VerticalSpacing(of: 10),
+        const ScaltonLine(),
       ],
     );
   }

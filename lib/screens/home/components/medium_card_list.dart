@@ -20,7 +20,7 @@ class _MediumCardListState extends State<MediumCardList> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 1), () {
+    Future.delayed(const Duration(seconds: 1), () {
       setState(() {
         isLoading = false;
       });
@@ -68,8 +68,8 @@ class _MediumCardListState extends State<MediumCardList> {
       child: Row(
         children: List.generate(
           2,
-          (index) => Padding(
-            padding: const EdgeInsets.only(left: kDefaultPadding),
+          (index) => const Padding(
+            padding: EdgeInsets.only(left: kDefaultPadding),
             child: MediumCardScalton(),
           ),
         ),

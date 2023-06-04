@@ -20,9 +20,9 @@ class SeconderyButton extends StatelessWidget {
         onPressed: press,
         style: OutlinedButton.styleFrom(
           padding:
-              EdgeInsets.symmetric(horizontal: kDefaultPadding, vertical: 12),
-          shape: RoundedRectangleBorder(
-            borderRadius: const BorderRadius.all(Radius.circular(8)),
+              const EdgeInsets.symmetric(horizontal: kDefaultPadding, vertical: 12),
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(8)),
             side: BorderSide(color: kActiveColor, width: 0.8),
           ),
         ),

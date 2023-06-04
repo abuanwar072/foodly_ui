@@ -25,7 +25,7 @@ class _DietariesState extends State<Dietaries> {
           press: () {},
           isMainSection: false,
         ),
-        VerticalSpacing(),
+        const VerticalSpacing(),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Wrap(

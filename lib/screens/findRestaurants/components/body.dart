@@ -11,6 +11,8 @@ import '../../../components/buttons/secondery_button.dart';
 import '../../home/home_screen.dart';
 
 class Body extends StatefulWidget {
+  const Body({super.key});
+
   @override
   _BodyState createState() => _BodyState();
 }
@@ -43,7 +45,7 @@ class _BodyState extends State<Body> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            WelcomeText(
+            const WelcomeText(
               title: "Find restaurants near you ",
               text:
                   "Please enter your location or allow access to \nyour location to find restaurants near you.",
@@ -62,7 +64,7 @@ class _BodyState extends State<Body> {
                           height: 24,
                           color: kActiveColor,
                         ),
-                        HorizontalSpacing(of: 10),
+                        const HorizontalSpacing(of: 10),
                         Text(
                           "Use current location",
                           style: Theme.of(context)
@@ -73,7 +75,7 @@ class _BodyState extends State<Body> {
                       ],
                     ),
             ),
-            VerticalSpacing(),
+            const VerticalSpacing(),
 
             // New Address Form
             Form(
@@ -98,7 +100,7 @@ class _BodyState extends State<Body> {
                       contentPadding: kTextFieldPadding,
                     ),
                   ),
-                  VerticalSpacing(),
+                  const VerticalSpacing(),
                   PrimaryButton(
                     text: "Continue",
                     press: () {
@@ -106,7 +108,7 @@ class _BodyState extends State<Body> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => HomeScreen(),
+                          builder: (context) => const HomeScreen(),
                         ),
                       );
                     },
@@ -115,7 +117,7 @@ class _BodyState extends State<Body> {
               ),
             ),
 
-            VerticalSpacing(),
+            const VerticalSpacing(),
           ],
         ),
       ),
@@ -127,8 +129,8 @@ class _BodyState extends State<Body> {
       height: 24,
       width: 24,
       child: Platform.isAndroid
-          ? CircularProgressIndicator()
-          : CupertinoActivityIndicator(),
+          ? const CircularProgressIndicator()
+          : const CupertinoActivityIndicator(),
     );
   }
 }

@@ -25,7 +25,7 @@ class _CategoriesState extends State<Categories> {
           press: () {},
           isMainSection: false,
         ),
-        VerticalSpacing(of: 20),
+        const VerticalSpacing(of: 20),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
           child: Wrap(

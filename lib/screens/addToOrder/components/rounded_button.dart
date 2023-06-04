@@ -19,11 +19,11 @@ class RoundedButton extends StatelessWidget {
       width: getProportionateScreenWidth(54),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.zero, backgroundColor: Color(0xFFF8F8F8),
+          padding: EdgeInsets.zero, backgroundColor: const Color(0xFFF8F8F8),
           shape: RoundedRectangleBorder(
             borderRadius: const BorderRadius.all(Radius.circular(100)),
             side: BorderSide(
-              color: Color(0xFF979797).withOpacity(0.1),
+              color: const Color(0xFF979797).withOpacity(0.1),
             ),
           ),
         ),

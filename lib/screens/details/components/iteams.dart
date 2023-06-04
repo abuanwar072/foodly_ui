@@ -4,6 +4,8 @@ import '../../../constants.dart';
 import '../../addToOrder/add_to_order_screen.dart';
 
 class Items extends StatefulWidget {
+  const Items({super.key});
+
   @override
   _ItemsState createState() => _ItemsState();
 }
@@ -42,7 +44,7 @@ class _ItemsState extends State<Items> {
               press: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => AddToOrderScrreen(),
+                  builder: (context) => const AddToOrderScrreen(),
                 ),
               ),
             ),
@@ -54,19 +56,19 @@ class _ItemsState extends State<Items> {
 }
 
 final List<Tab> demoTabs = <Tab>[
-  Tab(
+  const Tab(
     child: Text('Most Populars'),
   ),
-  Tab(
+  const Tab(
     child: Text('Beef & Lamb'),
   ),
-  Tab(
+  const Tab(
     child: Text('Seafood'),
   ),
-  Tab(
+  const Tab(
     child: Text('Appetizers'),
   ),
-  Tab(
+  const Tab(
     child: Text('Dim Sum'),
   ),
 ];

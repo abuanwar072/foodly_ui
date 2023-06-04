@@ -8,6 +8,8 @@ import '../../../components/scalton/big_card_scalton.dart';
 import '../../../demoData.dart';
 
 class Body extends StatefulWidget {
+  const Body({super.key});
+
   @override
   _BodyState createState() => _BodyState();
 }
@@ -21,7 +23,7 @@ class _BodyState extends State<Body> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 1), () {
+    Future.delayed(const Duration(seconds: 1), () {
       setState(() {
         _isLoading = false;
       });
@@ -32,7 +34,7 @@ class _BodyState extends State<Body> {
     setState(() {
       _isLoading = true;
     });
-    Future.delayed(Duration(seconds: 1), () {
+    Future.delayed(const Duration(seconds: 1), () {
       setState(() {
         _showSearchResult = true;
         _isLoading = false;
@@ -48,21 +50,21 @@ class _BodyState extends State<Body> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            VerticalSpacing(of: 10),
+            const VerticalSpacing(of: 10),
             Text('Search', style: kH2TextStyle),
-            VerticalSpacing(),
+            const VerticalSpacing(),
             buildSearchForm(),
-            VerticalSpacing(),
+            const VerticalSpacing(),
             Text(_showSearchResult ? "Search Results" : "Top Restaurants",
                 style: kSubHeadTextStyle),
-            VerticalSpacing(),
+            const VerticalSpacing(),
             Expanded(
               child: ListView.builder(
                 itemCount: _isLoading ? 2 : 5, //5 is demo length of your data
                 itemBuilder: (context, index) => Padding(
                   padding: const EdgeInsets.only(bottom: kDefaultPadding),
                   child: _isLoading
-                      ? BigCardScalton()
+                      ? const BigCardScalton()
                       : RestaurantInfoBigCard(
                           // Images are List<String>
                           images: demoBigImages..shuffle(),
@@ -70,7 +72,7 @@ class _BodyState extends State<Body> {
                           rating: 4.3,
                           numOfRating: 200,
                           deliveryTime: 25,
-                          foodType: ["Chinese", "American", "Deshi food"],
+                          foodType: const ["Chinese", "American", "Deshi food"],
                           press: () {},
                         ),
                 ),

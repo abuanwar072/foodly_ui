@@ -17,7 +17,7 @@ class _PromotionBannerState extends State<PromotionBanner> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 1), () {
+    Future.delayed(const Duration(seconds: 1), () {
       setState(() {
         isLoading = false;
       });
@@ -29,7 +29,7 @@ class _PromotionBannerState extends State<PromotionBanner> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
       child: isLoading
-          ? AspectRatio(
+          ? const AspectRatio(
               aspectRatio: 1.97,
               child: ScaltonRoundedContainer(radious: 12),
             )

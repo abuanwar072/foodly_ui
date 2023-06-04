@@ -36,34 +36,34 @@ class RestaurantInfoBigCard extends StatelessWidget {
         children: [
           // pass list of images here
           BigCardImageSlide(images: images),
-          VerticalSpacing(of: 10),
+          const VerticalSpacing(of: 10),
           Text(name, style: kSubHeadTextStyle),
           PriceRangeAndFoodtype(foodType: foodType),
-          VerticalSpacing(of: 5),
+          const VerticalSpacing(of: 5),
           Row(
             children: [
               RatingWithCounter(rating: rating, numOfRating: numOfRating),
-              HorizontalSpacing(of: 10),
+              const HorizontalSpacing(of: 10),
               SvgPicture.asset(
                 "assets/icons/clock.svg",
                 height: getProportionateScreenWidth(20),
                 width: getProportionateScreenWidth(20),
                 color: kMainColor.withOpacity(0.64),
               ),
-              HorizontalSpacing(of: 5),
+              const HorizontalSpacing(of: 5),
               Text("$deliveryTime Min", style: kCaptionTextStyle),
-              Padding(
+              const Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: kDefaultPadding / 2),
+                    EdgeInsets.symmetric(horizontal: kDefaultPadding / 2),
                 child: SmallDot(),
               ),
               SvgPicture.asset(
                 "assets/icons/delivery.svg",
                 height: getProportionateScreenWidth(20),
                 width: getProportionateScreenWidth(20),
-                color: Color(0xFF868686),
+                color: const Color(0xFF868686),
               ),
-              HorizontalSpacing(of: 5),
+              const HorizontalSpacing(of: 5),
               Text(isFreeDelivery ? "Free" : "Paid", style: kCaptionTextStyle),
             ],
           ),

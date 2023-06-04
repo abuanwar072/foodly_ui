@@ -10,7 +10,7 @@ class SmallDot extends StatelessWidget {
     return Container(
       height: 4,
       width: 4,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Color(0xFF868686),
         shape: BoxShape.circle,
       ),

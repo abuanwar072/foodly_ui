@@ -6,6 +6,8 @@ import 'package:foodly_ui/size_config.dart';
 import 'order_item_card.dart';
 
 class Body extends StatelessWidget {
+  const Body({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -13,7 +15,7 @@ class Body extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
         child: Column(
           children: [
-            VerticalSpacing(),
+            const VerticalSpacing(),
             // List of cart items
             ...List.generate(
               demoItems.length,
@@ -30,11 +32,11 @@ class Body extends StatelessWidget {
               ),
             ),
             buildPriceRow(text: "Subtotal", price: 28.0),
-            VerticalSpacing(of: 10),
+            const VerticalSpacing(of: 10),
             buildPriceRow(text: "Delivery", price: 0),
-            VerticalSpacing(of: 10),
+            const VerticalSpacing(of: 10),
             buildTotal(price: 20),
-            VerticalSpacing(of: 40),
+            const VerticalSpacing(of: 40),
             PrimaryButton(
               text: "Checkout (\$20.10)",
               press: () {},
@@ -54,7 +56,7 @@ class Body extends StatelessWidget {
             text: "Total ",
             style: kBodyTextStyle.copyWith(
                 color: kMainColor, fontWeight: FontWeight.w500),
-            children: [
+            children: const [
               TextSpan(
                 text: "(incl. VAT)",
                 style: TextStyle(fontWeight: FontWeight.normal),

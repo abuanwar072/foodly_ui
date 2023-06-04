@@ -32,8 +32,8 @@ class PriceRangeAndFoodtype extends StatelessWidget {
   }
 
   Padding buildSmallDot() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding / 2),
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: kDefaultPadding / 2),
       child: SmallDot(),
     );
   }

@@ -18,7 +18,7 @@ class FeaturedItems extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
           child: Text("Featured Items", style: kSubHeadTextStyle),
         ),
-        VerticalSpacing(of: 10),
+        const VerticalSpacing(of: 10),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
@@ -36,7 +36,7 @@ class FeaturedItems extends StatelessWidget {
                   ),
                 ),
               ),
-              HorizontalSpacing(),
+              const HorizontalSpacing(),
             ],
           ),
         ),

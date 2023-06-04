@@ -10,6 +10,8 @@ import '../../../screens/signUp/sign_up_screen.dart';
 import 'sign_in_form.dart';
 
 class Body extends StatelessWidget {
+  const Body({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -18,17 +20,17 @@ class Body extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            WelcomeText( 
+            const WelcomeText( 
               title: "Welcome to",
               text:
                   "Enter your Phone number or Email \naddress for sign in. Enjoy your food :)",
             ),
 
             // SignInForm contains forget password
-            SignInForm(),
-            VerticalSpacing(),
+            const SignInForm(),
+            const VerticalSpacing(),
             kOrText,
-            VerticalSpacing(of: 20),
+            const VerticalSpacing(of: 20),
 
             // Create new account
             Center(
@@ -42,12 +44,12 @@ class Body extends StatelessWidget {
                   children: <TextSpan>[
                     TextSpan(
                       text: "Create new account.",
-                      style: TextStyle(color: kActiveColor),
+                      style: const TextStyle(color: kActiveColor),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () => Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => SignUpScreen(),
+                                builder: (context) => const SignUpScreen(),
                               ),
                             ),
                     )
@@ -55,30 +57,30 @@ class Body extends StatelessWidget {
                 ),
               ),
             ),
-            VerticalSpacing(),
+            const VerticalSpacing(),
 
             // Facebook
             SocalButton(
               press: () {},
               text: "Connect with Facebook",
-              color: Color(0xFF395998),
+              color: const Color(0xFF395998),
               icon: SvgPicture.asset(
                 'assets/icons/facebook.svg',
-                color: Color(0xFF395998),
+                color: const Color(0xFF395998),
               ),
             ),
-            VerticalSpacing(of: 15),
+            const VerticalSpacing(of: 15),
 
             // Google
             SocalButton(
               press: () {},
               text: "Connect with Google",
-              color: Color(0xFF4285F4),
+              color: const Color(0xFF4285F4),
               icon: SvgPicture.asset(
                 'assets/icons/google.svg',
               ),
             ),
-            VerticalSpacing(),
+            const VerticalSpacing(),
           ],
         ),
       ),

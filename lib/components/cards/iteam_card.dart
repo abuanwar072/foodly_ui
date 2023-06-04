@@ -45,7 +45,7 @@ class ItemCard extends StatelessWidget {
                   ),
                 ),
               ),
-              HorizontalSpacing(),
+              const HorizontalSpacing(),
               Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -72,10 +72,10 @@ class ItemCard extends StatelessWidget {
                         Padding(
                           padding: EdgeInsets.symmetric(
                               horizontal: getProportionateScreenWidth(5)),
-                          child: SmallDot(),
+                          child: const SmallDot(),
                         ),
                         Text(foodType!, style: textStyle),
-                        Spacer(),
+                        const Spacer(),
                         Text(
                           "USD$price",
                           style: kSecondaryBodyTextStyle.copyWith(

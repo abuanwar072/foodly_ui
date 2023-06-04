@@ -24,12 +24,12 @@ class OnboardContent extends StatelessWidget {
             child: SvgPicture.asset(illustration!),
           ),
         ),
-        VerticalSpacing(of: 50),
+        const VerticalSpacing(of: 50),
         Text(
           title!,
           style: kHeadlineTextStyle,
         ),
-        VerticalSpacing(of: 8),
+        const VerticalSpacing(of: 8),
         Text(
           text!,
           style: kBodyTextStyle,

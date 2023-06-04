@@ -8,6 +8,8 @@ import '../../../size_config.dart';
 import '../number_verify_screen.dart';
 
 class Body extends StatefulWidget {
+  const Body({super.key});
+
   @override
   _BodyState createState() => _BodyState();
 }
@@ -24,12 +26,12 @@ class _BodyState extends State<Body> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            WelcomeText(
+            const WelcomeText(
               title: "Get started with Foodly",
               text:
                   "Enter your phone number to use foodly \nand enjoy your food :)",
             ),
-            VerticalSpacing(),
+            const VerticalSpacing(),
             Form(
               key: _formKey,
               child: TextFormField(
@@ -53,17 +55,17 @@ class _BodyState extends State<Body> {
                         // Save your country code
                       },
                       padding: const EdgeInsets.only(right: 5),
-                      textStyle: TextStyle(color: kMainColor),
+                      textStyle: const TextStyle(color: kMainColor),
                       initialSelection: "US",
                       showCountryOnly: false,
                       searchDecoration:
-                          InputDecoration(contentPadding: EdgeInsets.zero),
+                          const InputDecoration(contentPadding: EdgeInsets.zero),
                     ),
                   ),
                 ),
               ),
             ),
-            Spacer(),
+            const Spacer(),
             // Sign Up Button
             PrimaryButton(
               text: "Sign Up",
@@ -74,13 +76,13 @@ class _BodyState extends State<Body> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => NumberVerifyScreen(),
+                      builder: (context) => const NumberVerifyScreen(),
                     ),
                   );
                 } else {}
               },
             ),
-            VerticalSpacing(),
+            const VerticalSpacing(),
           ],
         ),
       ),

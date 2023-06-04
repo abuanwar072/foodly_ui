@@ -5,6 +5,8 @@ import '../../../size_config.dart';
 import '../../../components/section_title.dart';
 
 class PriceRange extends StatelessWidget {
+  const PriceRange({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -15,12 +17,12 @@ class PriceRange extends StatelessWidget {
           press: () {},
           isMainSection: false,
         ),
-        VerticalSpacing(),
+        const VerticalSpacing(),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              SizedBox(width: kDefaultPadding),
+              const SizedBox(width: kDefaultPadding),
               ...List.generate(
                 // For demo i'm using length 5
                 5, // Price limit
