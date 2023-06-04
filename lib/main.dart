@@ -27,12 +27,16 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-        textTheme: TextTheme(
+        textTheme: const TextTheme(
           bodyMedium: TextStyle(color: bodyTextColor),
           bodySmall: TextStyle(color: bodyTextColor),
         ),
+        inputDecorationTheme: const InputDecorationTheme(
+          contentPadding: EdgeInsets.all(defaultPadding),
+          hintStyle: TextStyle(color: bodyTextColor),
+        ),
       ),
-      home: OnboardingScreen(),
+      home: const OnboardingScreen(),
     );
   }
 }

@@ -6,72 +6,39 @@ import '../../../components/buttons/primary_button.dart';
 import '../../forgotPassword/forgot_password_screen.dart';
 
 class SignInForm extends StatefulWidget {
-  const SignInForm({
-    Key? key,
-  }) : super(key: key);
+  const SignInForm({super.key});
 
   @override
-  _SignInFormState createState() => _SignInFormState();
+  State<SignInForm> createState() => _SignInFormState();
 }
 
 class _SignInFormState extends State<SignInForm> {
-  // Note: This is a `GlobalKey<FormState>`,
-  // not a GlobalKey<MyCustomFormState>.
   final _formKey = GlobalKey<FormState>();
 
   bool _obscureText = true;
 
-  FocusNode? _passwordNode;
-
-  @override
-  void initState() {
-    super.initState();
-    _passwordNode = FocusNode();
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    _passwordNode!.dispose();
-  }
-
   @override
   Widget build(BuildContext context) {
-    String? email, password;
     return Form(
       key: _formKey,
       child: Column(
         children: [
-          // Email Field
           TextFormField(
             validator: emailValidator,
-            onSaved: (value) => email = value,
+            onSaved: (value) {},
             textInputAction: TextInputAction.next,
-            onEditingComplete: () {
-              // Once user click on Next then it go to password field
-              _passwordNode!.requestFocus();
-            },
-            style: kSecondaryBodyTextStyle,
-            cursorColor: primaryColor,
             keyboardType: TextInputType.emailAddress,
-            decoration: InputDecoration(
-              hintText: "Email Address",
-              contentPadding: kTextFieldPadding,
-            ),
+            decoration: const InputDecoration(hintText: "Email Address"),
           ),
           const SizedBox(height: defaultPadding),
 
           // Password Field
           TextFormField(
-            focusNode: _passwordNode,
             obscureText: _obscureText,
             validator: passwordValidator,
-            onSaved: (value) => password = value,
-            style: kSecondaryBodyTextStyle,
-            cursorColor: primaryColor,
+            onSaved: (value) {},
             decoration: InputDecoration(
               hintText: "Password",
-              contentPadding: kTextFieldPadding,
               suffixIcon: GestureDetector(
                 onTap: () {
                   setState(() {
@@ -109,16 +76,16 @@ class _SignInFormState extends State<SignInForm> {
             text: "Sign In",
             press: () {
               if (_formKey.currentState!.validate()) {
-                // If all data are correct then save data to out variables
                 _formKey.currentState!.save();
 
                 // just for demo
                 Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const BottomNavBar(),
-                    ));
-              } else {}
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const BottomNavBar(),
+                  ),
+                );
+              }
             },
           )
         ],

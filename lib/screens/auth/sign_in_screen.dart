@@ -5,7 +5,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../components/buttons/socal_button.dart';
 import '../../components/welcome_text.dart';
 import '../../constants.dart';
-import '../../size_config.dart';
 import '../signUp/sign_up_screen.dart';
 import 'components/sign_in_form.dart';
 
@@ -16,6 +15,7 @@ class SignInScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: const SizedBox(),
         title: const Text("Sign In"),
       ),
       body: SingleChildScrollView(
@@ -32,9 +32,8 @@ class SignInScreen extends StatelessWidget {
               const SignInForm(),
               const SizedBox(height: defaultPadding),
               kOrText,
-              const VerticalSpacing(of: 20),
+              const SizedBox(height: defaultPadding * 1.5),
 
-              // Create new account
               Center(
                 child: Text.rich(
                   TextSpan(
@@ -68,10 +67,13 @@ class SignInScreen extends StatelessWidget {
                 color: const Color(0xFF395998),
                 icon: SvgPicture.asset(
                   'assets/icons/facebook.svg',
-                  color: const Color(0xFF395998),
+                  colorFilter: const ColorFilter.mode(
+                    Color(0xFF395998),
+                    BlendMode.srcIn,
+                  ),
                 ),
               ),
-              const VerticalSpacing(of: 15),
+              const SizedBox(height: defaultPadding),
 
               // Google
               SocalButton(
