@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../components/bottom_nav_bar.dart';
 import '../../../constants.dart';
 import '../../../components/buttons/primary_button.dart';
-import '../../forgotPassword/forgot_password_screen.dart';
+import '../forgot_password_screen.dart';
 
 class SignInForm extends StatefulWidget {
   const SignInForm({super.key});

@@ -1,28 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:foodly_ui/screens/auth/reset_email_sent_screen.dart';
 
-import '../../../components/buttons/primary_button.dart';
-import '../../../components/welcome_text.dart';
-import '../../../constants.dart';
-import '../../../size_config.dart';
-import '../reset_email_sent_screen.dart';
+import '../../components/welcome_text.dart';
+import '../../constants.dart';
 
-class Body extends StatelessWidget {
-  const Body({super.key});
+class ForgotPasswordScreen extends StatelessWidget {
+  const ForgotPasswordScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: defaultPadding),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          WelcomeText(
-              title: "Forgot password",
-              text:
-                  "Enter your email address and we will \nsend you a reset instructions."),
-          SizedBox(height: defaultPadding),
-          ForgotPassForm(),
-        ],
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Forgot Password"),
+      ),
+      body: const SingleChildScrollView(
+        padding: EdgeInsets.symmetric(horizontal: defaultPadding),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            WelcomeText(
+                title: "Forgot password",
+                text:
+                    "Enter your email address and we will \nsend you a reset instructions."),
+            SizedBox(height: defaultPadding),
+            ForgotPassForm(),
+          ],
+        ),
       ),
     );
   }
@@ -40,7 +43,6 @@ class ForgotPassForm extends StatefulWidget {
 class _ForgotPassFormState extends State<ForgotPassForm> {
   final _formKey = GlobalKey<FormState>();
 
-  String? _email;
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -50,7 +52,7 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
           // Email Field
           TextFormField(
             validator: emailValidator,
-            onSaved: (value) => _email = value,
+            onSaved: (value) {},
             style: kSecondaryBodyTextStyle,
             cursorColor: primaryColor,
             keyboardType: TextInputType.emailAddress,
@@ -62,20 +64,21 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
           const SizedBox(height: defaultPadding),
 
           // Reset password Button
-          PrimaryButton(
-            text: "Reset password",
-            press: () {
+          ElevatedButton(
+            onPressed: () {
               if (_formKey.currentState!.validate()) {
                 // If all data are correct then save data to out variables
                 _formKey.currentState!.save();
                 Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ResetEmailSentScreen(),
-                    ));
-              } else {}
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ResetEmailSentScreen(),
+                  ),
+                );
+              }
             },
-          )
+            child: const Text("Reset password"),
+          ),
         ],
       ),
     );

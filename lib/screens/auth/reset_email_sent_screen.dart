@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:foodly_ui/constants.dart';
 
-import '../../components/buttons/primary_button.dart';
 import '../../components/welcome_text.dart';
-import '../../size_config.dart';
 
 class ResetEmailSentScreen extends StatelessWidget {
   const ResetEmailSentScreen({super.key});
@@ -25,10 +23,10 @@ class ResetEmailSentScreen extends StatelessWidget {
                 text:
                     "We have sent a instructions email to \ntheflutterway@email.com."),
             const SizedBox(height: defaultPadding),
-            PrimaryButton(
-              text: "Send again",
-              press: () {},
-            )
+            ElevatedButton(
+              onPressed: () {},
+              child: const Text("Send again"),
+            ),
           ],
         ),
       ),
