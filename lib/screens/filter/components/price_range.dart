@@ -17,7 +17,7 @@ class PriceRange extends StatelessWidget {
           press: () {},
           isMainSection: false,
         ),
-        const VerticalSpacing(),
+        const SizedBox(height: defaultPadding),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(

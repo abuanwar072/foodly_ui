@@ -21,7 +21,7 @@ class Info extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        const VerticalSpacing(),
+        const SizedBox(height: defaultPadding),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
           child: Column(

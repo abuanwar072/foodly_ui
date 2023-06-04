@@ -32,7 +32,7 @@ class SignInScreen extends StatelessWidget {
 
               // SignInForm contains forget password
               const SignInForm(),
-              const VerticalSpacing(),
+              const SizedBox(height: defaultPadding),
               kOrText,
               const VerticalSpacing(of: 20),
 
@@ -61,7 +61,7 @@ class SignInScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const VerticalSpacing(),
+              const SizedBox(height: defaultPadding),
 
               // Facebook
               SocalButton(
@@ -84,7 +84,7 @@ class SignInScreen extends StatelessWidget {
                   'assets/icons/google.svg',
                 ),
               ),
-              const VerticalSpacing(),
+              const SizedBox(height: defaultPadding),
             ],
           ),
         ),

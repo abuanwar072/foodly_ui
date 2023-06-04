@@ -52,12 +52,12 @@ class _BodyState extends State<Body> {
           children: [
             const VerticalSpacing(of: 10),
             Text('Search', style: kH2TextStyle),
-            const VerticalSpacing(),
+            const SizedBox(height: defaultPadding),
             buildSearchForm(),
-            const VerticalSpacing(),
+            const SizedBox(height: defaultPadding),
             Text(_showSearchResult ? "Search Results" : "Top Restaurants",
                 style: kSubHeadTextStyle),
-            const VerticalSpacing(),
+            const SizedBox(height: defaultPadding),
             Expanded(
               child: ListView.builder(
                 itemCount: _isLoading ? 2 : 5, //5 is demo length of your data

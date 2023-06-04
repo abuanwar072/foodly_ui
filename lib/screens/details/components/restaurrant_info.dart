@@ -30,7 +30,7 @@ class RestaurantInfo extends StatelessWidget {
           ),
           const VerticalSpacing(of: 10),
           const RatingWithCounter(rating: 4.3, numOfRating: 200),
-          const VerticalSpacing(),
+          const SizedBox(height: defaultPadding),
           Row(
             children: [
               buildDeliveryInfo(

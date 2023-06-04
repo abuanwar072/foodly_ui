@@ -75,7 +75,7 @@ class _BodyState extends State<Body> {
                       ],
                     ),
             ),
-            const VerticalSpacing(),
+            const SizedBox(height: defaultPadding),
 
             // New Address Form
             Form(
@@ -100,7 +100,7 @@ class _BodyState extends State<Body> {
                       contentPadding: kTextFieldPadding,
                     ),
                   ),
-                  const VerticalSpacing(),
+                  const SizedBox(height: defaultPadding),
                   PrimaryButton(
                     text: "Continue",
                     press: () {
@@ -117,7 +117,7 @@ class _BodyState extends State<Body> {
               ),
             ),
 
-            const VerticalSpacing(),
+            const SizedBox(height: defaultPadding),
           ],
         ),
       ),

@@ -63,7 +63,7 @@ class _SignUpFormState extends State<SignUpForm> {
               contentPadding: kTextFieldPadding,
             ),
           ),
-          const VerticalSpacing(),
+          const SizedBox(height: defaultPadding),
 
           // Email Field
           TextFormField(
@@ -83,7 +83,7 @@ class _SignUpFormState extends State<SignUpForm> {
               contentPadding: kTextFieldPadding,
             ),
           ),
-          const VerticalSpacing(),
+          const SizedBox(height: defaultPadding),
 
           // Password Field
           TextFormField(
@@ -113,7 +113,7 @@ class _SignUpFormState extends State<SignUpForm> {
               ),
             ),
           ),
-          const VerticalSpacing(),
+          const SizedBox(height: defaultPadding),
 
           // Confirm Password Field
           TextFormField(
@@ -139,7 +139,7 @@ class _SignUpFormState extends State<SignUpForm> {
               ),
             ),
           ),
-          const VerticalSpacing(),
+          const SizedBox(height: defaultPadding),
           // Sign Up Button
           PrimaryButton(
             text: "Sign Up",

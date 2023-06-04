@@ -15,7 +15,7 @@ class Body extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const VerticalSpacing(),
+              const SizedBox(height: defaultPadding),
               Text("Account Settings", style: kH2TextStyle),
               Text(
                 "Update your settings like notifications, payments, profile edit etc.",

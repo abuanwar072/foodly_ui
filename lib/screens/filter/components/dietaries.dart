@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../size_config.dart';
-import '../../../components/section_title.dart';
 import '../../../components/buttons/fitted_button.dart';
+import '../../../components/section_title.dart';
+import '../../../constants.dart';
 
 class Dietaries extends StatefulWidget {
   const Dietaries({
@@ -25,7 +25,7 @@ class _DietariesState extends State<Dietaries> {
           press: () {},
           isMainSection: false,
         ),
-        const VerticalSpacing(),
+        const SizedBox(height: defaultPadding),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Wrap(

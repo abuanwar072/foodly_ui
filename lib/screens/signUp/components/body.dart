@@ -88,7 +88,7 @@ class Body extends StatelessWidget {
                   'assets/icons/google.svg',
                 ),
               ),
-              const VerticalSpacing(),
+              const SizedBox(height: defaultPadding),
             ],
           ),
         ),

@@ -30,14 +30,14 @@ class _BodyState extends State<Body> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Info(),
-            const VerticalSpacing(),
+            const SizedBox(height: defaultPadding),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const RequiredSectionTitle(title: "Choice of top Cookie"),
-                  const VerticalSpacing(),
+                  const SizedBox(height: defaultPadding),
                   ...List.generate(
                     choiceOfTopCookies.length,
                     (index) => RoundedCheckboxListTile(
@@ -50,9 +50,9 @@ class _BodyState extends State<Body> {
                       },
                     ),
                   ),
-                  const VerticalSpacing(),
+                  const SizedBox(height: defaultPadding),
                   const RequiredSectionTitle(title: "Choice of Bottom Cookie"),
-                  const VerticalSpacing(),
+                  const SizedBox(height: defaultPadding),
                   ...List.generate(
                     choiceOfTopCookies.length,
                     (index) => RoundedCheckboxListTile(
@@ -65,7 +65,7 @@ class _BodyState extends State<Body> {
                       },
                     ),
                   ),
-                  const VerticalSpacing(),
+                  const SizedBox(height: defaultPadding),
                   // Num of item
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -98,7 +98,7 @@ class _BodyState extends State<Body> {
                       ),
                     ],
                   ),
-                  const VerticalSpacing(),
+                  const SizedBox(height: defaultPadding),
                   PrimaryButton(
                     text: "Add to Order (\$11.98)",
                     press: () => Navigator.push(
@@ -111,7 +111,7 @@ class _BodyState extends State<Body> {
                 ],
               ),
             ),
-            const VerticalSpacing()
+            const SizedBox(height: defaultPadding)
           ],
         ),
       ),

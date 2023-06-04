@@ -28,7 +28,7 @@ class NumberVerifyScreen extends StatelessWidget {
 
               // OTP form
               const OtpForm(),
-              const VerticalSpacing(),
+              const SizedBox(height: defaultPadding),
               Center(
                 child: Text.rich(
                   TextSpan(
@@ -50,14 +50,14 @@ class NumberVerifyScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const VerticalSpacing(),
+              const SizedBox(height: defaultPadding),
               const Center(
                 child: Text(
                   "By Signing up you agree to our Terms \nConditions & Privacy Policy.",
                   textAlign: TextAlign.center,
                 ),
               ),
-              const VerticalSpacing(),
+              const SizedBox(height: defaultPadding),
             ],
           ),
         ),

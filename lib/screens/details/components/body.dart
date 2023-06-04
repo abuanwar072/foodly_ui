@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../constants.dart';
 import '../../../size_config.dart';
 import 'featured_items.dart';
 import 'iteams.dart';
@@ -17,7 +18,7 @@ class Body extends StatelessWidget {
           children: [
             VerticalSpacing(of: 10),
             RestaurantInfo(),
-            VerticalSpacing(),
+            SizedBox(height: defaultPadding),
             FeaturedItems(),
             Items(),
           ],

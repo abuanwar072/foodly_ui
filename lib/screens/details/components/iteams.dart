@@ -28,7 +28,7 @@ class _ItemsState extends State<Items> {
             tabs: demoTabs,
           ),
         ),
-        // VerticalSpacing(),
+        // SizedBox(height: defaultPadding),
         ...List.generate(
           demoData.length,
           (index) => Padding(

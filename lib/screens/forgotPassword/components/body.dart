@@ -20,7 +20,7 @@ class Body extends StatelessWidget {
               title: "Forgot password",
               text:
                   "Enter your email address and we will \nsend you a reset instructions."),
-          VerticalSpacing(),
+          SizedBox(height: defaultPadding),
           ForgotPassForm(),
         ],
       ),
@@ -59,7 +59,7 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
               contentPadding: kTextFieldPadding,
             ),
           ),
-          const VerticalSpacing(),
+          const SizedBox(height: defaultPadding),
 
           // Reset password Button
           PrimaryButton(

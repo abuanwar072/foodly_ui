@@ -60,7 +60,7 @@ class _SignInFormState extends State<SignInForm> {
               contentPadding: kTextFieldPadding,
             ),
           ),
-          const VerticalSpacing(),
+          const SizedBox(height: defaultPadding),
 
           // Password Field
           TextFormField(
@@ -85,7 +85,7 @@ class _SignInFormState extends State<SignInForm> {
               ),
             ),
           ),
-          const VerticalSpacing(),
+          const SizedBox(height: defaultPadding),
 
           // Forget Password
           GestureDetector(
@@ -103,7 +103,7 @@ class _SignInFormState extends State<SignInForm> {
                   .copyWith(fontWeight: FontWeight.w500),
             ),
           ),
-          const VerticalSpacing(),
+          const SizedBox(height: defaultPadding),
 
           // Sign In Button
           PrimaryButton(

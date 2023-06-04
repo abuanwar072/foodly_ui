@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../constants.dart';
 import '../../../size_config.dart';
 import 'categories.dart';
 import 'dietaries.dart';
@@ -16,11 +17,11 @@ class Body extends StatelessWidget {
           children: [
             VerticalSpacing(of: 10),
             Categories(),
-            VerticalSpacing(),
+            SizedBox(height: defaultPadding),
             Dietaries(),
-            VerticalSpacing(),
+            SizedBox(height: defaultPadding),
             PriceRange(),
-            VerticalSpacing(),
+            SizedBox(height: defaultPadding),
           ],
         ),
       ),

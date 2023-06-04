@@ -15,7 +15,7 @@ class Body extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
         child: Column(
           children: [
-            const VerticalSpacing(),
+            const SizedBox(height: defaultPadding),
             // List of cart items
             ...List.generate(
               demoItems.length,

@@ -24,7 +24,7 @@ class ResetEmailSentScreen extends StatelessWidget {
                 title: "Reset email sent",
                 text:
                     "We have sent a instructions email to \ntheflutterway@email.com."),
-            const VerticalSpacing(),
+            const SizedBox(height: defaultPadding),
             PrimaryButton(
               text: "Send again",
               press: () {},

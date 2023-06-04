@@ -20,7 +20,7 @@ class WelcomeText extends StatelessWidget {
         ),
         const SizedBox(height: defaultPadding / 2),
         Text(text, style: kBodyTextStyle),
-        const VerticalSpacing(),
+        const SizedBox(height: defaultPadding),
       ],
     );
   }

@@ -31,7 +31,7 @@ class _BodyState extends State<Body> {
               text:
                   "Enter your phone number to use foodly \nand enjoy your food :)",
             ),
-            const VerticalSpacing(),
+            const SizedBox(height: defaultPadding),
             Form(
               key: _formKey,
               child: TextFormField(
@@ -82,7 +82,7 @@ class _BodyState extends State<Body> {
                 } else {}
               },
             ),
-            const VerticalSpacing(),
+            const SizedBox(height: defaultPadding),
           ],
         ),
       ),
