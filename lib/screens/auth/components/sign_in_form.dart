@@ -4,7 +4,7 @@ import '../../../components/bottom_nav_bar.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
 import '../../../components/buttons/primary_button.dart';
-import '../../../screens/forgotPassword/forgot_password_screen.dart';
+import '../../forgotPassword/forgot_password_screen.dart';
 
 class SignInForm extends StatefulWidget {
   const SignInForm({

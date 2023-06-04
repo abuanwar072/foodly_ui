@@ -2,70 +2,66 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../constants.dart';
-import '../../../components/welcome_text.dart';
-import '../../auth/sign_in_screen.dart';
-import '../../../size_config.dart';
-import '../../../components/buttons/socal_button.dart';
-import 'sign_up_form.dart';
+import '../../components/buttons/socal_button.dart';
+import '../../components/welcome_text.dart';
+import '../../constants.dart';
+import '../../size_config.dart';
+import '../signUp/sign_up_screen.dart';
+import 'components/sign_in_form.dart';
 
-class Body extends StatelessWidget {
-  const Body({super.key});
+class SignInScreen extends StatelessWidget {
+  const SignInScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: SingleChildScrollView(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Sign In"),
+      ),
+      body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const WelcomeText(
-                title: "Create Account",
-                text: "Enter your Name, Email and Password \nfor sign up.",
+                title: "Welcome to",
+                text:
+                    "Enter your Phone number or Email \naddress for sign in. Enjoy your food :)",
               ),
 
-              // Sign Up Form
-              const SignUpForm(),
+              // SignInForm contains forget password
+              const SignInForm(),
+              const VerticalSpacing(),
+              kOrText,
               const VerticalSpacing(of: 20),
 
-              // Already have account
+              // Create new account
               Center(
                 child: Text.rich(
                   TextSpan(
                     style: Theme.of(context)
                         .textTheme
                         .bodySmall!
-                        .copyWith(fontWeight: FontWeight.w500),
-                    text: "Already have account? ",
+                        .copyWith(fontWeight: FontWeight.w600),
+                    text: "Don’t have account? ",
                     children: <TextSpan>[
                       TextSpan(
-                        text: "Sign In",
+                        text: "Create new account.",
                         style: const TextStyle(color: primaryColor),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () => Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const SignInScreen(),
+                                  builder: (context) => const SignUpScreen(),
                                 ),
                               ),
-                      ),
+                      )
                     ],
                   ),
                 ),
               ),
-              const VerticalSpacing(of: 20),
-              Center(
-                child: Text(
-                  "By Signing up you agree to our Terms \nConditions & Privacy Policy.",
-                  textAlign: TextAlign.center,
-                  style: kBodyTextStyle,
-                ),
-              ),
-              const VerticalSpacing(of: 15),
-              kOrText,
-              const VerticalSpacing(of: 15),
+              const VerticalSpacing(),
 
               // Facebook
               SocalButton(

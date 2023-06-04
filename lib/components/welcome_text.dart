@@ -13,12 +13,12 @@ class WelcomeText extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const VerticalSpacing(of: 10),
+        const SizedBox(height: defaultPadding),
         Text(
           title,
           style: kH1TextStyle,
         ),
-        const VerticalSpacing(of: 10),
+        const SizedBox(height: defaultPadding / 2),
         Text(text, style: kBodyTextStyle),
         const VerticalSpacing(),
       ],
