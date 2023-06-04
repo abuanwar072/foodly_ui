@@ -54,8 +54,7 @@ class Body extends StatelessWidget {
         Text.rich(
           TextSpan(
             text: "Total ",
-            style: kBodyTextStyle.copyWith(
-                color: titleColor, fontWeight: FontWeight.w500),
+            style: TextStyle(color: titleColor, fontWeight: FontWeight.w500),
             children: const [
               TextSpan(
                 text: "(incl. VAT)",
@@ -66,8 +65,7 @@ class Body extends StatelessWidget {
         ),
         Text(
           "\$$price",
-          style: kBodyTextStyle.copyWith(
-              color: titleColor, fontWeight: FontWeight.w500),
+          style: TextStyle(color: titleColor, fontWeight: FontWeight.w500),
         ),
       ],
     );
@@ -79,11 +77,11 @@ class Body extends StatelessWidget {
       children: [
         Text(
           text,
-          style: kBodyTextStyle.copyWith(color: titleColor),
+          style: TextStyle(color: titleColor),
         ),
         Text(
           "\$$price",
-          style: kBodyTextStyle.copyWith(color: titleColor),
+          style: TextStyle(color: titleColor),
         )
       ],
     );

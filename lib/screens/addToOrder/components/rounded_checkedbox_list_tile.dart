@@ -30,7 +30,7 @@ class RoundedCheckboxListTile extends StatelessWidget {
                 const HorizontalSpacing(of: 10),
                 Text(
                   text,
-                  style: kBodyTextStyle.copyWith(
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       color: titleColor.withOpacity(0.84), height: 1),
                 )
               ],

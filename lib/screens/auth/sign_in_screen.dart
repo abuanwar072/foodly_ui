@@ -29,8 +29,6 @@ class SignInScreen extends StatelessWidget {
                 text:
                     "Enter your Phone number or Email \naddress for sign in. Enjoy your food :)",
               ),
-
-              // SignInForm contains forget password
               const SignInForm(),
               const SizedBox(height: defaultPadding),
               kOrText,

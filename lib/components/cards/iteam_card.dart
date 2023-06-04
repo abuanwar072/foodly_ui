@@ -59,7 +59,7 @@ class ItemCard extends StatelessWidget {
                     ),
                     Text(
                       description!,
-                      style: kBodyTextStyle,
+                      style: Theme.of(context).textTheme.bodyMedium,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                     ),

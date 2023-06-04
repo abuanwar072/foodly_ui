@@ -60,7 +60,7 @@ class Body extends StatelessWidget {
                 child: Text(
                   "By Signing up you agree to our Terms \nConditions & Privacy Policy.",
                   textAlign: TextAlign.center,
-                  style: kBodyTextStyle,
+                  style: Theme.of(context).textTheme.bodyMedium,
                 ),
               ),
               const VerticalSpacing(of: 15),

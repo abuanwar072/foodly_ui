@@ -38,7 +38,7 @@ class OrderedItemCard extends StatelessWidget {
                   const VerticalSpacing(of: 5),
                   Text(
                     description!,
-                    style: kBodyTextStyle.copyWith(),
+                    style: Theme.of(context).textTheme.bodyMedium,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   )

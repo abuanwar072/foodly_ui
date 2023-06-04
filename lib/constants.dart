@@ -12,13 +12,6 @@ const inputColor = Color(0xFFFBFBFB);
 const double defaultPadding = 16;
 const Duration kDefaultDuration = Duration(milliseconds: 250);
 
-// Text Styles
-final TextStyle kH1TextStyle = TextStyle(
-  fontSize: getProportionateScreenWidth(34),
-  fontWeight: FontWeight.w500,
-  letterSpacing: 0.22,
-);
-
 final TextStyle kH2TextStyle = TextStyle(
   fontSize: getProportionateScreenWidth(28),
   fontWeight: FontWeight.w600,
@@ -40,12 +33,6 @@ final TextStyle kSubHeadTextStyle = TextStyle(
   fontWeight: FontWeight.w500,
   color: titleColor,
   letterSpacing: 0.44,
-);
-
-final TextStyle kBodyTextStyle = TextStyle(
-  fontSize: getProportionateScreenWidth(16),
-  color: bodyTextColor,
-  height: 1.5,
 );
 
 final TextStyle kSecondaryBodyTextStyle = TextStyle(

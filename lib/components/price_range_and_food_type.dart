@@ -17,13 +17,14 @@ class PriceRangeAndFoodtype extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(priceRange, style: kBodyTextStyle),
+        Text(priceRange, style: Theme.of(context).textTheme.bodyMedium),
         ...List.generate(
           foodType.length,
           (index) => Row(
             children: [
               buildSmallDot(),
-              Text(foodType[index], style: kBodyTextStyle),
+              Text(foodType[index],
+                  style: Theme.of(context).textTheme.bodyMedium),
             ],
           ),
         ),

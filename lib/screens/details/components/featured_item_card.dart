@@ -46,8 +46,10 @@ class FeaturedItemCard extends StatelessWidget {
               const VerticalSpacing(of: 5),
               Text(
                 title,
-                style: kBodyTextStyle.copyWith(
-                    color: titleColor, fontWeight: FontWeight.w500),
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyMedium
+                    ?.copyWith(color: titleColor, fontWeight: FontWeight.w500),
               ),
               const VerticalSpacing(of: 5),
               Row(

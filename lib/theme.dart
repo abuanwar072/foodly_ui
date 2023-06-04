@@ -21,22 +21,10 @@ ThemeData buildThemeData() {
   );
 }
 
-// TextTheme textTheme() {
-//   return TextTheme(
-//     headline3: kHeadlineTextStyle,
-//     headline4: kH1TextStyle,
-//     headline5: kH2TextStyle,
-//     headline6: kH3TextStyle,
-//     subtitle1: kSubHeadTextStyle,
-//     bodyText2: kBodyTextStyle,
-//     button: kButtonTextStyle,
-//   );
-// }
-
 final InputDecorationTheme inputDecorationTheme = InputDecorationTheme(
   fillColor: inputColor,
   filled: true,
-  // hintStyle: kBodyTextStyle,
+  // hintStyle: Theme.of(context).textTheme.bodyMedium,
   contentPadding: const EdgeInsets.all(defaultPadding),
   border: kDefaultOutlineInputBorder,
   enabledBorder: kDefaultOutlineInputBorder,

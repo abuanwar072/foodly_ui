@@ -19,7 +19,7 @@ class Body extends StatelessWidget {
               Text("Account Settings", style: kH2TextStyle),
               Text(
                 "Update your settings like notifications, payments, profile edit etc.",
-                style: kBodyTextStyle,
+                style: Theme.of(context).textTheme.bodyMedium,
               ),
               const VerticalSpacing(of: 10),
               ProfileMenuCard(

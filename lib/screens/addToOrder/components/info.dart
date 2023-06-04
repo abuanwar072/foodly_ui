@@ -31,7 +31,7 @@ class Info extends StatelessWidget {
               const VerticalSpacing(of: 5),
               Text(
                 "Shortbread, chocolate turtle cookies, and red velvet. 8 ounces cream cheese, softened.",
-                style: kBodyTextStyle,
+                style: Theme.of(context).textTheme.bodyMedium,
               ),
               const VerticalSpacing(of: 10),
               const PriceRangeAndFoodtype(

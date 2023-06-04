@@ -32,7 +32,7 @@ class OnboardContent extends StatelessWidget {
         const VerticalSpacing(of: 8),
         Text(
           text!,
-          style: kBodyTextStyle,
+          style: Theme.of(context).textTheme.bodyMedium,
           textAlign: TextAlign.center,
         ),
       ],

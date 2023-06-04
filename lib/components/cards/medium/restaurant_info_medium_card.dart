@@ -47,7 +47,7 @@ class RestaurantInfoMediumCard extends StatelessWidget {
             Text(
               location!,
               maxLines: 1,
-              style: kBodyTextStyle,
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
             const VerticalSpacing(of: 10),
             Row(
