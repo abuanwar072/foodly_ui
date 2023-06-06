@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
-import '../../../size_config.dart';
 
 class OrderedItemCard extends StatelessWidget {
   const OrderedItemCard({
@@ -23,19 +22,16 @@ class OrderedItemCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             NumOfItems(numOfItem: numOfItem),
-            const HorizontalSpacing(of: 10),
+            const SizedBox(width: defaultPadding * 0.75),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     title!,
-                    style: TextStyle(
-                      fontSize: getProportionateScreenWidth(18),
-                      fontWeight: FontWeight.w500,
-                    ),
+                    style: Theme.of(context).textTheme.titleMedium,
                   ),
-                  const VerticalSpacing(of: 5),
+                  const SizedBox(height: defaultPadding / 4),
                   Text(
                     description!,
                     style: Theme.of(context).textTheme.bodyMedium,
@@ -45,7 +41,7 @@ class OrderedItemCard extends StatelessWidget {
                 ],
               ),
             ),
-            const HorizontalSpacing(of: 10),
+            const SizedBox(width: defaultPadding / 2),
             Text(
               "USD$price",
               style: Theme.of(context)
@@ -55,7 +51,7 @@ class OrderedItemCard extends StatelessWidget {
             )
           ],
         ),
-        const VerticalSpacing(of: 10),
+        const SizedBox(height: defaultPadding / 2),
         const Divider(),
       ],
     );
