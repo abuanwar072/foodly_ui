@@ -16,7 +16,7 @@ class RestaurantInfoMediumCard extends StatelessWidget {
     required this.press,
   }) : super(key: key);
 
-  final String? image, name, location;
+  final String image, name, location;
   final double rating;
   final int delivertTime;
   final VoidCallback press;
@@ -26,7 +26,7 @@ class RestaurantInfoMediumCard extends StatelessWidget {
     return InkWell(
       onTap: press,
       child: SizedBox(
-        width: getProportionateScreenWidth(200),
+        width: 200,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -34,18 +34,18 @@ class RestaurantInfoMediumCard extends StatelessWidget {
               aspectRatio: 1.25,
               child: ClipRRect(
                 borderRadius: const BorderRadius.all(Radius.circular(10)),
-                child: Image.asset(image!, fit: BoxFit.cover),
+                child: Image.asset(image, fit: BoxFit.cover),
               ),
             ),
-            const VerticalSpacing(of: 10),
+            const SizedBox(height: defaultPadding / 2),
             Text(
-              name!,
+              name,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: Theme.of(context).textTheme.titleLarge,
             ),
             Text(
-              location!,
+              location,
               maxLines: 1,
               style: Theme.of(context).textTheme.bodyMedium,
             ),
@@ -57,14 +57,18 @@ class RestaurantInfoMediumCard extends StatelessWidget {
                 Rating(rating: rating),
                 Text(
                   "$delivertTime min",
-                  style: kSecondaryBodyTextStyle.copyWith(
-                      color: titleColor.withOpacity(0.74)),
+                  style: Theme.of(context)
+                      .textTheme
+                      .labelLarge!
+                      .copyWith(color: titleColor.withOpacity(0.74)),
                 ),
                 const SmallDot(),
                 Text(
                   "Free delivery",
-                  style: kSecondaryBodyTextStyle.copyWith(
-                      color: titleColor.withOpacity(0.74)),
+                  style: Theme.of(context)
+                      .textTheme
+                      .labelMedium!
+                      .copyWith(color: titleColor.withOpacity(0.74)),
                 )
               ],
             )

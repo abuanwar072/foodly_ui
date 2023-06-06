@@ -64,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
                 child: BigCardImageSlide(images: demoBigImages),
               ),
-              const VerticalSpacing(of: 25),
+              const SizedBox(height: defaultPadding * 2),
               SectionTitle(
                 title: "Featured Partners",
                 press: () => Navigator.push(
@@ -74,7 +74,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const VerticalSpacing(of: 15),
+              const SizedBox(height: defaultPadding),
               const MediumCardList(),
               const VerticalSpacing(of: 25),
               // Banner

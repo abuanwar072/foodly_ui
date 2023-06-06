@@ -102,7 +102,7 @@ class _BodyState extends State<Body> {
           } else {}
         },
         validator: requiredValidator,
-        style: kSecondaryBodyTextStyle,
+        style: Theme.of(context).textTheme.labelLarge,
         textInputAction: TextInputAction.search,
         decoration: InputDecoration(
           hintText: "Search on foodly",

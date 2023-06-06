@@ -33,13 +33,13 @@ class RestaurantInfo extends StatelessWidget {
           const SizedBox(height: defaultPadding),
           Row(
             children: [
-              buildDeliveryInfo(
+              const DeliveryInfo(
                 iconSrc: "assets/icons/delivery.svg",
                 text: "Free",
                 subText: "Delivery",
               ),
               const HorizontalSpacing(),
-              buildDeliveryInfo(
+              const DeliveryInfo(
                 iconSrc: "assets/icons/clock.svg",
                 text: "25",
                 subText: "Minutes",
@@ -61,22 +61,34 @@ class RestaurantInfo extends StatelessWidget {
       ),
     );
   }
+}
 
-  Row buildDeliveryInfo({required String iconSrc, text, subText}) {
+class DeliveryInfo extends StatelessWidget {
+  const DeliveryInfo({
+    super.key,
+    required this.iconSrc,
+    required this.text,
+    required this.subText,
+  });
+
+  final String iconSrc, text, subText;
+
+  @override
+  Widget build(BuildContext context) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SvgPicture.asset(
           iconSrc,
-          height: getProportionateScreenWidth(20),
-          width: getProportionateScreenWidth(20),
+          height: 20,
+          width: 20,
           color: primaryColor,
         ),
         const HorizontalSpacing(of: 10),
         Text.rich(
           TextSpan(
             text: "$text\n",
-            style: kSecondaryBodyTextStyle,
+            style: Theme.of(context).textTheme.labelLarge,
             children: [
               TextSpan(
                 text: subText,

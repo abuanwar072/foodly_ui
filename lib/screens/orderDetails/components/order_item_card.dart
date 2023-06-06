@@ -11,7 +11,7 @@ class OrderedItemCard extends StatelessWidget {
     required this.description,
     required this.price,
   }) : super(key: key);
-  final int? numOfItem;
+  final int numOfItem;
   final String? title, description;
   final double? price;
 
@@ -22,7 +22,7 @@ class OrderedItemCard extends StatelessWidget {
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            buildNumOfItem(),
+            NumOfItems(numOfItem: numOfItem),
             const HorizontalSpacing(of: 10),
             Expanded(
               child: Column(
@@ -57,8 +57,18 @@ class OrderedItemCard extends StatelessWidget {
       ],
     );
   }
+}
 
-  Container buildNumOfItem() {
+class NumOfItems extends StatelessWidget {
+  const NumOfItems({
+    super.key,
+    required this.numOfItem,
+  });
+
+  final int numOfItem;
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       height: 24,
       width: 24,
@@ -70,7 +80,10 @@ class OrderedItemCard extends StatelessWidget {
       ),
       child: Text(
         numOfItem.toString(),
-        style: kSecondaryBodyTextStyle.copyWith(color: primaryColor),
+        style: Theme.of(context)
+            .textTheme
+            .labelLarge!
+            .copyWith(color: primaryColor),
       ),
     );
   }

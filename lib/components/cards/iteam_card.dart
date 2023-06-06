@@ -22,10 +22,10 @@ class ItemCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TextStyle textStyle = kSecondaryBodyTextStyle.copyWith(
-      color: titleColor.withOpacity(0.64),
-      fontWeight: FontWeight.normal,
-    );
+    TextStyle textStyle = Theme.of(context).textTheme.labelLarge!.copyWith(
+          color: titleColor.withOpacity(0.64),
+          fontWeight: FontWeight.normal,
+        );
     return InkWell(
       borderRadius: const BorderRadius.all(Radius.circular(8)),
       onTap: press,
@@ -80,8 +80,10 @@ class ItemCard extends StatelessWidget {
                         const Spacer(),
                         Text(
                           "USD$price",
-                          style: kSecondaryBodyTextStyle.copyWith(
-                              color: primaryColor),
+                          style: Theme.of(context)
+                              .textTheme
+                              .labelLarge!
+                              .copyWith(color: primaryColor),
                         )
                       ],
                     ),

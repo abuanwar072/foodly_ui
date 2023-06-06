@@ -103,7 +103,7 @@ class ProfileMenuCard extends StatelessWidget {
                     Text(
                       title!,
                       maxLines: 1,
-                      style: kSecondaryBodyTextStyle,
+                      style: Theme.of(context).textTheme.labelLarge,
                     ),
                     const VerticalSpacing(of: 5),
                     Text(

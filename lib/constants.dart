@@ -28,13 +28,6 @@ final TextStyle kHeadlineTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
 );
 
-final TextStyle kSecondaryBodyTextStyle = TextStyle(
-  fontSize: getProportionateScreenWidth(14),
-  fontWeight: FontWeight.w500,
-  color: titleColor,
-  // height: 1.5,
-);
-
 final TextStyle kButtonTextStyle = TextStyle(
   color: Colors.white,
   fontSize: getProportionateScreenWidth(14),
