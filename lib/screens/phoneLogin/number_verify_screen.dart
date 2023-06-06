@@ -1,9 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants.dart';
 import '../../components/welcome_text.dart';
-import '../../size_config.dart';
+import '../../constants.dart';
 import 'components/otp_form.dart';
 
 class NumberVerifyScreen extends StatelessWidget {

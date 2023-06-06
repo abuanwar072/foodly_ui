@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
-import '../../../size_config.dart';
 import '../../rating.dart';
 import '../../small_dot.dart';
 
@@ -42,14 +41,15 @@ class RestaurantInfoMediumCard extends StatelessWidget {
               name,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: Theme.of(context).textTheme.titleLarge,
+              style: Theme.of(context).textTheme.titleMedium,
             ),
+            const SizedBox(height: defaultPadding / 4),
             Text(
               location,
               maxLines: 1,
               style: Theme.of(context).textTheme.bodyMedium,
             ),
-            const VerticalSpacing(of: 10),
+            const SizedBox(height: defaultPadding / 2),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
