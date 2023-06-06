@@ -4,6 +4,7 @@ import '../../../components/cards/medium/restaurant_info_medium_card.dart';
 import '../../../components/scalton/medium_card_scalton.dart';
 import '../../../constants.dart';
 import '../../../demoData.dart';
+import '../../details/details_screen.dart';
 
 class MediumCardList extends StatefulWidget {
   const MediumCardList({
@@ -52,7 +53,14 @@ class _MediumCardListState extends State<MediumCardList> {
                       location: data[index]['location'],
                       delivertTime: 25,
                       rating: 4.6,
-                      press: () {},
+                      press: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const DetailsScreen(),
+                          ),
+                        );
+                      },
                     ),
                   ),
                 ),
