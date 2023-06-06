@@ -16,7 +16,8 @@ class FeaturedItems extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
-          child: Text("Featured Items", style: kSubHeadTextStyle),
+          child: Text("Featured Items",
+              style: Theme.of(context).textTheme.titleLarge),
         ),
         const VerticalSpacing(of: 10),
         SingleChildScrollView(

@@ -28,13 +28,6 @@ final TextStyle kHeadlineTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
 );
 
-final TextStyle kSubHeadTextStyle = TextStyle(
-  fontSize: getProportionateScreenWidth(20),
-  fontWeight: FontWeight.w500,
-  color: titleColor,
-  letterSpacing: 0.44,
-);
-
 final TextStyle kSecondaryBodyTextStyle = TextStyle(
   fontSize: getProportionateScreenWidth(14),
   fontWeight: FontWeight.w500,

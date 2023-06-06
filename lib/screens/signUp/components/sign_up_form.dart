@@ -44,10 +44,8 @@ class _SignUpFormState extends State<SignUpForm> {
             obscureText: _obscureText,
             validator: passwordValidator,
             textInputAction: TextInputAction.next,
-            // We need to validate our password
             onChanged: (value) {},
             onSaved: (value) {},
-
             decoration: InputDecoration(
               hintText: "Password",
               suffixIcon: GestureDetector(

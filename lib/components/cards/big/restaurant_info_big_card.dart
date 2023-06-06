@@ -37,7 +37,7 @@ class RestaurantInfoBigCard extends StatelessWidget {
           // pass list of images here
           BigCardImageSlide(images: images),
           const VerticalSpacing(of: 10),
-          Text(name, style: kSubHeadTextStyle),
+          Text(name, style: Theme.of(context).textTheme.titleLarge),
           PriceRangeAndFoodtype(foodType: foodType),
           const VerticalSpacing(of: 5),
           Row(

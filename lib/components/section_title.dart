@@ -25,8 +25,8 @@ class SectionTitle extends StatelessWidget {
           Text(
             isMainSection ? title : title.toUpperCase(),
             style: isMainSection
-                ? kH3TextStyle
-                : kSecondaryBodyTextStyle.copyWith(fontSize: 16),
+                ? Theme.of(context).textTheme.titleLarge
+                : Theme.of(context).textTheme.titleMedium,
           ),
           GestureDetector(
             onTap: press,

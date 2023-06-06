@@ -42,7 +42,7 @@ class RestaurantInfoMediumCard extends StatelessWidget {
               name!,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: kSubHeadTextStyle,
+              style: Theme.of(context).textTheme.titleLarge,
             ),
             Text(
               location!,

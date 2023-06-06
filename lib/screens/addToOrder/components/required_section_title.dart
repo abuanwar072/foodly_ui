@@ -18,7 +18,7 @@ class RequiredSectionTitle extends StatelessWidget {
         Text(
           title,
           maxLines: 1,
-          style: kSubHeadTextStyle,
+          style: Theme.of(context).textTheme.titleLarge,
         ),
         Container(
           padding: const EdgeInsets.symmetric(

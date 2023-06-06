@@ -56,7 +56,7 @@ class _BodyState extends State<Body> {
             buildSearchForm(),
             const SizedBox(height: defaultPadding),
             Text(_showSearchResult ? "Search Results" : "Top Restaurants",
-                style: kSubHeadTextStyle),
+                style: Theme.of(context).textTheme.titleLarge),
             const SizedBox(height: defaultPadding),
             Expanded(
               child: ListView.builder(

@@ -54,8 +54,10 @@ class ItemCard extends StatelessWidget {
                     Text(
                       title!,
                       maxLines: 1,
-                      style: kSubHeadTextStyle.copyWith(
-                          fontSize: getProportionateScreenWidth(18)),
+                      style: Theme.of(context)
+                          .textTheme
+                          .titleLarge!
+                          .copyWith(fontSize: 18),
                     ),
                     Text(
                       description!,

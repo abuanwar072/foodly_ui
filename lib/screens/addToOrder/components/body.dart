@@ -83,7 +83,7 @@ class _BodyState extends State<Body> {
                         padding: const EdgeInsets.symmetric(
                             horizontal: defaultPadding),
                         child: Text(numOfItems.toString().padLeft(2, "0"),
-                            style: kSubHeadTextStyle),
+                            style: Theme.of(context).textTheme.titleLarge),
                       ),
                       // decrement buuton
                       RoundedButton(
