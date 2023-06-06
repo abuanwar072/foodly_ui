@@ -36,22 +36,33 @@ class RestaurantInfoBigCard extends StatelessWidget {
         children: [
           // pass list of images here
           BigCardImageSlide(images: images),
-          const VerticalSpacing(of: 10),
+          const SizedBox(height: defaultPadding / 2),
           Text(name, style: Theme.of(context).textTheme.titleLarge),
+          const SizedBox(height: defaultPadding / 4),
           PriceRangeAndFoodtype(foodType: foodType),
-          const VerticalSpacing(of: 5),
+          const SizedBox(height: defaultPadding / 4),
           Row(
             children: [
               RatingWithCounter(rating: rating, numOfRating: numOfRating),
-              const HorizontalSpacing(of: 10),
+              const SizedBox(width: defaultPadding / 2),
               SvgPicture.asset(
                 "assets/icons/clock.svg",
-                height: getProportionateScreenWidth(20),
-                width: getProportionateScreenWidth(20),
-                color: titleColor.withOpacity(0.64),
+                height: 20,
+                width: 20,
+                colorFilter: ColorFilter.mode(
+                  Theme.of(context)
+                      .textTheme
+                      .bodyLarge!
+                      .color!
+                      .withOpacity(0.5),
+                  BlendMode.srcIn,
+                ),
               ),
               const HorizontalSpacing(of: 5),
-              Text("$deliveryTime Min", style: kCaptionTextStyle),
+              Text(
+                "$deliveryTime Min",
+                style: Theme.of(context).textTheme.labelSmall,
+              ),
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: defaultPadding / 2),
                 child: SmallDot(),
@@ -60,10 +71,18 @@ class RestaurantInfoBigCard extends StatelessWidget {
                 "assets/icons/delivery.svg",
                 height: getProportionateScreenWidth(20),
                 width: getProportionateScreenWidth(20),
-                color: const Color(0xFF868686),
+                colorFilter: ColorFilter.mode(
+                  Theme.of(context)
+                      .textTheme
+                      .bodyLarge!
+                      .color!
+                      .withOpacity(0.5),
+                  BlendMode.srcIn,
+                ),
               ),
               const HorizontalSpacing(of: 5),
-              Text(isFreeDelivery ? "Free" : "Paid", style: kCaptionTextStyle),
+              Text(isFreeDelivery ? "Free" : "Paid",
+                  style: Theme.of(context).textTheme.labelSmall),
             ],
           ),
         ],

@@ -48,7 +48,10 @@ class OrderedItemCard extends StatelessWidget {
             const HorizontalSpacing(of: 10),
             Text(
               "USD$price",
-              style: kCaptionTextStyle.copyWith(color: primaryColor),
+              style: Theme.of(context)
+                  .textTheme
+                  .labelSmall!
+                  .copyWith(color: primaryColor),
             )
           ],
         ),

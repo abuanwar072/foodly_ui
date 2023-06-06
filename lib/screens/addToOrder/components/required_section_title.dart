@@ -30,7 +30,10 @@ class RequiredSectionTitle extends StatelessWidget {
               borderRadius: const BorderRadius.all(Radius.circular(4))),
           child: Text(
             "Required".toUpperCase(),
-            style: kCaptionTextStyle.copyWith(color: accentColor),
+            style: Theme.of(context)
+                .textTheme
+                .labelSmall!
+                .copyWith(color: accentColor),
           ),
         )
       ],

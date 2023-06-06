@@ -20,7 +20,10 @@ class Rating extends StatelessWidget {
       ),
       child: Text(
         rating.toString(),
-        style: kCaptionTextStyle.copyWith(color: Colors.white),
+        style: Theme.of(context)
+            .textTheme
+            .labelSmall!
+            .copyWith(color: Colors.white),
       ),
     );
   }

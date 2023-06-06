@@ -34,12 +34,6 @@ final TextStyle kButtonTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
 );
 
-final TextStyle kCaptionTextStyle = TextStyle(
-  color: titleColor.withOpacity(0.64),
-  fontSize: getProportionateScreenWidth(12),
-  fontWeight: FontWeight.w600,
-);
-
 final EdgeInsets kTextFieldPadding = EdgeInsets.symmetric(
   horizontal: defaultPadding,
   vertical: getProportionateScreenHeight(defaultPadding),

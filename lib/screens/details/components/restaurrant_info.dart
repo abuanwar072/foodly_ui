@@ -50,7 +50,10 @@ class RestaurantInfo extends StatelessWidget {
                 child: SeconderyButton(
                   child: Text(
                     "Take away".toUpperCase(),
-                    style: kCaptionTextStyle.copyWith(color: primaryColor),
+                    style: Theme.of(context)
+                        .textTheme
+                        .labelSmall!
+                        .copyWith(color: primaryColor),
                   ),
                   press: () {},
                 ),
@@ -92,8 +95,10 @@ class DeliveryInfo extends StatelessWidget {
             children: [
               TextSpan(
                 text: subText,
-                style:
-                    kCaptionTextStyle.copyWith(fontWeight: FontWeight.normal),
+                style: Theme.of(context)
+                    .textTheme
+                    .labelSmall!
+                    .copyWith(fontWeight: FontWeight.normal),
               )
             ],
           ),

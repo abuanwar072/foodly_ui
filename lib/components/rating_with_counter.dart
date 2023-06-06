@@ -16,8 +16,10 @@ class RatingWithCounter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TextStyle textStyle =
-        kCaptionTextStyle.copyWith(color: titleColor.withOpacity(0.74));
+    TextStyle textStyle = Theme.of(context)
+        .textTheme
+        .labelSmall!
+        .copyWith(color: titleColor.withOpacity(0.74));
     return Row(
       children: [
         Text(rating.toString(), style: textStyle),
