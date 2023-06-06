@@ -59,8 +59,8 @@ class RoundedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: getProportionateScreenWidth(64),
-      width: getProportionateScreenWidth(64),
+      height: 64,
+      width: 64,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           padding: EdgeInsets.zero,
