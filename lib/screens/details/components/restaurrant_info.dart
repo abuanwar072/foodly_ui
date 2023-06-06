@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../../components/buttons/secondery_button.dart';
 import '../../../components/price_range_and_food_type.dart';
 import '../../../components/rating_with_counter.dart';
-
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
@@ -24,11 +22,11 @@ class RestaurantInfo extends StatelessWidget {
             style: Theme.of(context).textTheme.headlineMedium,
             maxLines: 1,
           ),
-          const VerticalSpacing(of: 10),
+          const SizedBox(height: defaultPadding / 2),
           const PriceRangeAndFoodtype(
             foodType: ["Chinese", "American", "Deshi food"],
           ),
-          const VerticalSpacing(of: 10),
+          const SizedBox(height: defaultPadding / 2),
           const RatingWithCounter(rating: 4.3, numOfRating: 200),
           const SizedBox(height: defaultPadding),
           Row(
@@ -38,26 +36,22 @@ class RestaurantInfo extends StatelessWidget {
                 text: "Free",
                 subText: "Delivery",
               ),
-              const HorizontalSpacing(),
+              const SizedBox(width: defaultPadding),
               const DeliveryInfo(
                 iconSrc: "assets/icons/clock.svg",
                 text: "25",
                 subText: "Minutes",
               ),
               const Spacer(),
-              SizedBox(
-                width: getProportionateScreenWidth(115),
-                child: SeconderyButton(
-                  child: Text(
-                    "Take away".toUpperCase(),
-                    style: Theme.of(context)
-                        .textTheme
-                        .labelSmall!
-                        .copyWith(color: primaryColor),
+              OutlinedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
                   ),
-                  press: () {},
                 ),
-              )
+                child: const Text("Take away"),
+              ),
             ],
           ),
         ],

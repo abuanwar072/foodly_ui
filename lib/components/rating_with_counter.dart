@@ -16,22 +16,31 @@ class RatingWithCounter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TextStyle textStyle = Theme.of(context)
-        .textTheme
-        .labelSmall!
-        .copyWith(color: titleColor.withOpacity(0.74));
     return Row(
       children: [
-        Text(rating.toString(), style: textStyle),
+        Text(
+          rating.toString(),
+          style: Theme.of(context)
+              .textTheme
+              .labelSmall!
+              .copyWith(color: titleColor.withOpacity(0.74)),
+        ),
         const HorizontalSpacing(of: 5),
         SvgPicture.asset(
           "assets/icons/rating.svg",
-          height: getProportionateScreenWidth(20),
-          width: getProportionateScreenWidth(20),
-          color: primaryColor,
+          height: 20,
+          width: 20,
+          colorFilter: const ColorFilter.mode(
+            primaryColor,
+            BlendMode.srcIn,
+          ),
         ),
         const HorizontalSpacing(of: 5),
-        Text("$numOfRating+ Ratings", style: textStyle),
+        Text("$numOfRating+ Ratings",
+            style: Theme.of(context)
+                .textTheme
+                .labelSmall!
+                .copyWith(color: titleColor.withOpacity(0.74))),
       ],
     );
   }

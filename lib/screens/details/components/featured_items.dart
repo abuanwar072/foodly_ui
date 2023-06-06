@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
-import '../../../size_config.dart';
 import 'featured_item_card.dart';
 
 class FeaturedItems extends StatelessWidget {
@@ -19,7 +18,7 @@ class FeaturedItems extends StatelessWidget {
           child: Text("Featured Items",
               style: Theme.of(context).textTheme.titleLarge),
         ),
-        const VerticalSpacing(of: 10),
+        const SizedBox(height: defaultPadding / 2),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
@@ -27,7 +26,7 @@ class FeaturedItems extends StatelessWidget {
               ...List.generate(
                 3, // for demo we use 3
                 (index) => Padding(
-                  padding: const EdgeInsets.only(left: defaultPadding - 5),
+                  padding: const EdgeInsets.only(left: defaultPadding),
                   child: FeaturedItemCard(
                     title: "Cookie Sandwich",
                     image: "assets/images/featured _items_${index + 1}.png",
@@ -37,7 +36,7 @@ class FeaturedItems extends StatelessWidget {
                   ),
                 ),
               ),
-              const HorizontalSpacing(),
+              const SizedBox(width: defaultPadding),
             ],
           ),
         ),

@@ -20,7 +20,7 @@ class _ItemsState extends State<Items> {
           length: demoTabs.length,
           child: TabBar(
             isScrollable: true,
-            unselectedLabelColor: titleColor.withOpacity(0.54),
+            unselectedLabelColor: titleColor,
             labelStyle: Theme.of(context).textTheme.titleLarge,
             onTap: (value) {
               // you will get selected tab index
@@ -33,7 +33,7 @@ class _ItemsState extends State<Items> {
           demoData.length,
           (index) => Padding(
             padding: const EdgeInsets.symmetric(
-                horizontal: defaultPadding - 5, vertical: defaultPadding / 2),
+                horizontal: defaultPadding, vertical: defaultPadding / 2),
             child: ItemCard(
               title: demoData[index]["title"],
               description: demoData[index]["description"],
