@@ -16,7 +16,8 @@ class Body extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: defaultPadding),
-              Text("Account Settings", style: kH2TextStyle),
+              Text("Account Settings",
+                  style: Theme.of(context).textTheme.headlineMedium),
               Text(
                 "Update your settings like notifications, payments, profile edit etc.",
                 style: Theme.of(context).textTheme.bodyMedium,

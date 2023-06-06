@@ -21,7 +21,7 @@ class RestaurantInfo extends StatelessWidget {
         children: [
           Text(
             "Mayfield Bakery & Cafe",
-            style: kH2TextStyle,
+            style: Theme.of(context).textTheme.headlineMedium,
             maxLines: 1,
           ),
           const VerticalSpacing(of: 10),

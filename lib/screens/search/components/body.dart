@@ -51,7 +51,7 @@ class _BodyState extends State<Body> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const VerticalSpacing(of: 10),
-            Text('Search', style: kH2TextStyle),
+            Text('Search', style: Theme.of(context).textTheme.headlineMedium),
             const SizedBox(height: defaultPadding),
             buildSearchForm(),
             const SizedBox(height: defaultPadding),

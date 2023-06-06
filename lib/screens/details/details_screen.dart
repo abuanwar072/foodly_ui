@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../constants.dart';
 import '../search/search_screen.dart';
-import 'components/body.dart';
+import 'components/featured_items.dart';
+import 'components/iteams.dart';
+import 'components/restaurrant_info.dart';
 
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({super.key});
@@ -10,28 +13,37 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(context),
-      body: const Body(),
-    );
-  }
-
-  AppBar buildAppBar(BuildContext context) {
-    return AppBar(
-      actions: [
-        IconButton(
-          icon: SvgPicture.asset("assets/icons/share.svg"),
-          onPressed: () {},
-        ),
-        IconButton(
-          icon: SvgPicture.asset("assets/icons/search.svg"),
-          onPressed: () => Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const SearchScreen(),
+      appBar: AppBar(
+        actions: [
+          IconButton(
+            icon: SvgPicture.asset("assets/icons/share.svg"),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: SvgPicture.asset("assets/icons/search.svg"),
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const SearchScreen(),
+              ),
             ),
           ),
+        ],
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(height: defaultPadding / 2),
+              RestaurantInfo(),
+              SizedBox(height: defaultPadding),
+              FeaturedItems(),
+              Items(),
+            ],
+          ),
         ),
-      ],
+      ),
     );
   }
 }

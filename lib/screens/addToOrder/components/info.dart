@@ -27,7 +27,8 @@ class Info extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Cookie Sandwich", style: kH3TextStyle),
+              Text("Cookie Sandwich",
+                  style: Theme.of(context).textTheme.titleLarge),
               const VerticalSpacing(of: 5),
               Text(
                 "Shortbread, chocolate turtle cookies, and red velvet. 8 ounces cream cheese, softened.",
