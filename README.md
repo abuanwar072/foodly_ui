@@ -1,16 +1,9 @@
-# foodly_ui
+# Restaurant/Food Delivery App UI kit in Flutter
 
-A new Flutter project.
+We build Flutter Restaurant/Food delivery app UI Kit to help you build a nice clean app for restaurent using flutter which runs both Android and iOS. This kit comes packed with 25 beautifully designed screens and a hearty portion of deliciously responsive components. Also, we have skeleton loading and have separate components for both Android and iOS so that you feel the native experience.
 
-## Getting Started
+## Screenshots
 
-This project is a starting point for a Flutter application.
+![All pages](/preview.png)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Preview](/foodly_thun.png)
