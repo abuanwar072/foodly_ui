@@ -5,7 +5,6 @@ import 'package:foodly_ui/entry_point.dart';
 import '../../components/buttons/secondery_button.dart';
 import '../../components/welcome_text.dart';
 import '../../constants.dart';
-import '../home/home_screen.dart';
 
 class FindRestaurantsScreen extends StatelessWidget {
   const FindRestaurantsScreen({super.key});
@@ -93,7 +92,7 @@ class FindRestaurantsScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const HomeScreen(),
+                            builder: (context) => const EntryPoint(),
                           ),
                         );
                       },
