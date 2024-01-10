@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../../components/section_title.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
-import '../../../components/buttons/fitted_button.dart';
-import '../../../components/section_title.dart';
 
 class Categories extends StatefulWidget {
   const Categories({
@@ -32,15 +31,13 @@ class _CategoriesState extends State<Categories> {
             spacing: defaultPadding / 2,
             children: List.generate(
               demoCategories.length,
-              (index) => FittedButton(
-                text: demoCategories[index]["title"],
-                isActive: demoCategories[index]["isActive"],
-                press: () {
-                  setState(() {
-                    demoCategories[index]["isActive"] =
-                        !demoCategories[index]["isActive"];
-                  });
-                },
+              (index) => ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  minimumSize: const Size(56, 40),
+                  backgroundColor: index == 2 ? primaryColor : bodyTextColor,
+                ),
+                child: Text(demoCategories[index]["title"]),
               ),
             ),
           ),
@@ -54,7 +51,7 @@ class _CategoriesState extends State<Categories> {
     {"title": "All", "isActive": false},
     {"title": "Brunch", "isActive": false},
     {"title": "Dinner", "isActive": false},
-    {"title": "Burgers", "isActive": false},
+    {"title": "Burgers", "isActive": true},
     {"title": "Chinese", "isActive": false},
     {"title": "Pizza", "isActive": false},
     {"title": "Salads", "isActive": false},

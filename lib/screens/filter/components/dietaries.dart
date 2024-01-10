@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../components/buttons/fitted_button.dart';
 import '../../../components/section_title.dart';
 import '../../../constants.dart';
 
@@ -32,15 +31,13 @@ class _DietariesState extends State<Dietaries> {
             spacing: 10,
             children: List.generate(
               demoDietaries.length,
-              (index) => FittedButton(
-                text: demoDietaries[index]["title"],
-                isActive: demoDietaries[index]["isActive"],
-                press: () {
-                  setState(() {
-                    demoDietaries[index]["isActive"] =
-                        !demoDietaries[index]["isActive"];
-                  });
-                },
+              (index) => ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  minimumSize: Size(56, 40),
+                  backgroundColor: index == 1 ? primaryColor : bodyTextColor,
+                ),
+                child: Text(demoDietaries[index]["title"]),
               ),
             ),
           ),

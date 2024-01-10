@@ -17,8 +17,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    /// If you set your home screen as first screen make sure call [SizeConfig().init(context)]
-    SizeConfig().init(context);
     return Scaffold(
       appBar: AppBar(
         leading: const SizedBox(),
