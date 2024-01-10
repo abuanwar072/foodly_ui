@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodly_ui/screens/phoneLogin/phone_login_screen.dart';
 
 import '../../../constants.dart';
 
@@ -82,7 +83,14 @@ class _SignUpFormState extends State<SignUpForm> {
           const SizedBox(height: defaultPadding),
           // Sign Up Button
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => const PghoneLoginScreen(),
+                ),
+              );
+            },
             child: const Text("Sign Up"),
           ),
         ],
