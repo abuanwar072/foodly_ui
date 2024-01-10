@@ -12,11 +12,6 @@ const inputColor = Color(0xFFFBFBFB);
 const double defaultPadding = 16;
 const Duration kDefaultDuration = Duration(milliseconds: 250);
 
-final TextStyle kHeadlineTextStyle = TextStyle(
-  fontSize: getProportionateScreenWidth(30),
-  fontWeight: FontWeight.bold,
-);
-
 final TextStyle kButtonTextStyle = TextStyle(
   color: Colors.white,
   fontSize: getProportionateScreenWidth(14),

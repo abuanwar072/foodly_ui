@@ -17,7 +17,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   int currentPage = 0;
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return Scaffold(
       body: SafeArea(
         child: Column(

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:foodly_ui/constants.dart';
 
 import '../../../size_config.dart';
 
@@ -24,10 +23,13 @@ class OnboardContent extends StatelessWidget {
             child: SvgPicture.asset(illustration!),
           ),
         ),
-        const VerticalSpacing(of: 50),
+        const SizedBox(height: 16),
         Text(
           title!,
-          style: kHeadlineTextStyle,
+          style: Theme.of(context)
+              .textTheme
+              .titleLarge!
+              .copyWith(fontWeight: FontWeight.bold),
         ),
         const VerticalSpacing(of: 8),
         Text(
