@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:foodly_ui/screens/entry_point.dart';
 
 import 'package:form_field_validator/form_field_validator.dart';
 
-import '../../../components/bottom_nav_bar.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
 import '../../../components/buttons/primary_button.dart';
@@ -129,7 +129,7 @@ class _OtpFormState extends State<OtpForm> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const BottomNavBar(),
+                    builder: (context) => const EntryPoint(),
                   ),
                 );
               } else {}

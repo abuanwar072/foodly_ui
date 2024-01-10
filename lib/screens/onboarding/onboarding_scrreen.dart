@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:foodly_ui/constants.dart';
-import 'package:foodly_ui/size_config.dart';
 
 import '../../components/dot_indicators.dart';
 import '../auth/sign_in_screen.dart';

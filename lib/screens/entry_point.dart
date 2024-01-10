@@ -9,16 +9,16 @@ import '../size_config.dart';
 
 import '../constants.dart';
 
-class BottomNavBar extends StatefulWidget {
-  const BottomNavBar({
+class EntryPoint extends StatefulWidget {
+  const EntryPoint({
     Key? key,
   }) : super(key: key);
 
   @override
-  _BottomNavBarState createState() => _BottomNavBarState();
+  _EntryPointState createState() => _EntryPointState();
 }
 
-class _BottomNavBarState extends State<BottomNavBar> {
+class _EntryPointState extends State<EntryPoint> {
   // Bydefault first one is selected
   int _selectedIndex = 0;
 
@@ -56,22 +56,18 @@ class _BottomNavBarState extends State<BottomNavBar> {
         items: List.generate(
           _navitems.length,
           (index) => BottomNavigationBarItem(
-            icon: buildSvgIcon(
-                src: _navitems[index]['icon'],
-                isActive: _selectedIndex == index),
+            icon: SvgPicture.asset(
+              _navitems[index]["icon"],
+              height: 30,
+              width: 30,
+              colorFilter: ColorFilter.mode(
+                  index == _selectedIndex ? primaryColor : bodyTextColor,
+                  BlendMode.srcIn),
+            ),
             label: _navitems[index]["title"],
           ),
         ),
       ),
-    );
-  }
-
-  SvgPicture buildSvgIcon({required String src, bool isActive = false}) {
-    return SvgPicture.asset(
-      src,
-      height: 30,
-      width: 30,
-      color: isActive ? primaryColor : bodyTextColor,
     );
   }
 }

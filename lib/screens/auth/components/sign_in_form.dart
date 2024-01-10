@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:foodly_ui/screens/entry_point.dart';
 
-import '../../../components/bottom_nav_bar.dart';
 import '../../../constants.dart';
 import '../../../components/buttons/primary_button.dart';
 import '../forgot_password_screen.dart';
@@ -79,11 +79,12 @@ class _SignInFormState extends State<SignInForm> {
                 _formKey.currentState!.save();
 
                 // just for demo
-                Navigator.push(
+                Navigator.pushAndRemoveUntil(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const BottomNavBar(),
+                    builder: (context) => const EntryPoint(),
                   ),
+                  (_) => true,
                 );
               }
             },
