@@ -46,7 +46,7 @@ class _PghoneLoginScreenState extends State<PghoneLoginScreen> {
                       .copyWith(color: titleColor),
                   cursorColor: primaryColor,
                   keyboardType: TextInputType.phone,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: "Phone Number",
                     contentPadding: kTextFieldPadding,
                   ),

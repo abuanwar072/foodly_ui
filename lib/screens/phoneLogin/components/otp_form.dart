@@ -4,7 +4,7 @@ import 'package:foodly_ui/screens/entry_point.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 
 import '../../../constants.dart';
-import '../../../size_config.dart';
+
 import '../../../components/buttons/primary_button.dart';
 
 class OtpForm extends StatefulWidget {

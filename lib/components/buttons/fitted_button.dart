@@ -18,7 +18,7 @@ class FittedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: TextButton.styleFrom(
-        padding: EdgeInsets.symmetric(horizontal: defaultPadding * 1.5),
+        padding: const EdgeInsets.symmetric(horizontal: defaultPadding * 1.5),
         backgroundColor: isActive! ? primaryColor : const Color(0xFFF1F1F1),
       ),
       onPressed: press,

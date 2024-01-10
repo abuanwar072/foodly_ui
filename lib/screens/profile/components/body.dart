@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:foodly_ui/constants.dart';
-import 'package:foodly_ui/size_config.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});

@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../constants.dart';
-import '../../../size_config.dart';
 import '../../../components/welcome_text.dart';
 import '../../../components/buttons/primary_button.dart';
 import '../../../components/buttons/secondery_button.dart';

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../size_config.dart';
 import 'big_card_image_slide_scalton.dart';
 import 'scalton_line.dart';
 

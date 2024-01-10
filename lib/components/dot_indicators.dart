@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
-import '../size_config.dart';
 
 class DotIndicator extends StatelessWidget {
   const DotIndicator({
@@ -18,7 +17,7 @@ class DotIndicator extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedContainer(
       duration: kDefaultDuration,
-      margin: EdgeInsets.symmetric(horizontal: defaultPadding / 2),
+      margin: const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
       height: 5,
       width: 8,
       decoration: BoxDecoration(

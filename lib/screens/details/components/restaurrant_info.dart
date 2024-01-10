@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../components/price_range_and_food_type.dart';
 import '../../../components/rating_with_counter.dart';
 import '../../../constants.dart';
-import '../../../size_config.dart';
 
 class RestaurantInfo extends StatelessWidget {
   const RestaurantInfo({

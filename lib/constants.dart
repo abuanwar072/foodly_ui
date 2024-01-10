@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:foodly_ui/size_config.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 
 // clolors that we use in our app
@@ -12,13 +11,13 @@ const inputColor = Color(0xFFFBFBFB);
 const double defaultPadding = 16;
 const Duration kDefaultDuration = Duration(milliseconds: 250);
 
-final TextStyle kButtonTextStyle = TextStyle(
+const TextStyle kButtonTextStyle = TextStyle(
   color: Colors.white,
   fontSize: 14,
   fontWeight: FontWeight.bold,
 );
 
-final EdgeInsets kTextFieldPadding = EdgeInsets.symmetric(
+const EdgeInsets kTextFieldPadding = EdgeInsets.symmetric(
   horizontal: defaultPadding,
   vertical: defaultPadding,
 );
@@ -26,7 +25,7 @@ final EdgeInsets kTextFieldPadding = EdgeInsets.symmetric(
 // Text Field Decoration
 const OutlineInputBorder kDefaultOutlineInputBorder = OutlineInputBorder(
   borderRadius: BorderRadius.all(Radius.circular(6)),
-  borderSide: const BorderSide(
+  borderSide: BorderSide(
     color: Color(0xFFF3F2F2),
   ),
 );

@@ -48,10 +48,10 @@ class _SearchScreenState extends State<SearchScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: defaultPadding),
+              const SizedBox(height: defaultPadding),
               Text('Search', style: Theme.of(context).textTheme.headlineMedium),
               const SizedBox(height: defaultPadding),
-              SearchForm(),
+              const SearchForm(),
               const SizedBox(height: defaultPadding),
               Text(_showSearchResult ? "Search Results" : "Top Restaurants",
                   style: Theme.of(context).textTheme.titleLarge),

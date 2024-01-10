@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:foodly_ui/constants.dart';
-import 'package:foodly_ui/size_config.dart';
 
 import '../../../components/cards/big/restaurant_info_big_card.dart';
 import '../../../components/scalton/big_card_scalton.dart';

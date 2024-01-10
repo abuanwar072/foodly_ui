@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodly_ui/constants.dart';
 
-import '../../../size_config.dart';
 import '../../dot_indicators.dart';
 import 'big_card_image.dart';
 

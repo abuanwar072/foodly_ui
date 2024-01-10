@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../size_config.dart';
-
 class RoundedButton extends StatelessWidget {
   const RoundedButton({
     Key? key,
