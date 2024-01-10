@@ -32,7 +32,7 @@ class ItemCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(5.0),
         child: SizedBox(
-          height: getProportionateScreenWidth(110),
+          height: 110,
           child: Row(
             children: [
               AspectRatio(
@@ -45,7 +45,7 @@ class ItemCard extends StatelessWidget {
                   ),
                 ),
               ),
-              const HorizontalSpacing(),
+              const SizedBox(width: defaultPadding),
               Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -71,10 +71,10 @@ class ItemCard extends StatelessWidget {
                           priceRange!,
                           style: textStyle,
                         ),
-                        Padding(
+                        const Padding(
                           padding: EdgeInsets.symmetric(
-                              horizontal: getProportionateScreenWidth(5)),
-                          child: const SmallDot(),
+                              horizontal: defaultPadding / 2),
+                          child: SmallDot(),
                         ),
                         Text(foodType!, style: textStyle),
                         const Spacer(),

@@ -18,13 +18,13 @@ class BigCardScalton extends StatelessWidget {
           aspectRatio: 1.81,
           child: BigCardImageSlideScalton(),
         ),
-        const VerticalSpacing(of: 10),
+        const SizedBox(height: 16),
         ScaltonLine(
-          width: SizeConfig.screenWidth * 0.8,
+          width: MediaQuery.of(context).size.width * 0.8,
         ),
-        const VerticalSpacing(of: 10),
+        const SizedBox(height: 16),
         const ScaltonLine(),
-        const VerticalSpacing(of: 10),
+        const SizedBox(height: 16),
         const ScaltonLine(),
       ],
     );

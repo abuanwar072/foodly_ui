@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../scalton/scalton_rounded_container.dart';
 import '../scalton/scalton_line.dart';
-import '../../size_config.dart';
+import '../scalton/scalton_rounded_container.dart';
 
 class MediumCardScalton extends StatelessWidget {
   const MediumCardScalton({
@@ -12,7 +11,7 @@ class MediumCardScalton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: getProportionateScreenWidth(200),
+      width: 200,
       child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -20,11 +19,11 @@ class MediumCardScalton extends StatelessWidget {
             aspectRatio: 1.25,
             child: ScaltonRoundedContainer(),
           ),
-          VerticalSpacing(of: 10),
+          SizedBox(height: 16),
           ScaltonLine(width: 150),
-          VerticalSpacing(of: 10),
+          SizedBox(height: 16),
           ScaltonLine(),
-          VerticalSpacing(of: 10),
+          SizedBox(height: 16),
           ScaltonLine(),
         ],
       ),

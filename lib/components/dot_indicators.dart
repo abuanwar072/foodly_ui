@@ -18,7 +18,7 @@ class DotIndicator extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedContainer(
       duration: kDefaultDuration,
-      margin: EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(5)),
+      margin: EdgeInsets.symmetric(horizontal: defaultPadding / 2),
       height: 5,
       width: 8,
       decoration: BoxDecoration(

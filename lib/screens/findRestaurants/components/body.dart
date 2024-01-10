@@ -64,7 +64,7 @@ class _BodyState extends State<Body> {
                           height: 24,
                           color: primaryColor,
                         ),
-                        const HorizontalSpacing(of: 10),
+                        const SizedBox(width: 8),
                         Text(
                           "Use current location",
                           style: Theme.of(context)

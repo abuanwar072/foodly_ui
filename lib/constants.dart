@@ -14,13 +14,13 @@ const Duration kDefaultDuration = Duration(milliseconds: 250);
 
 final TextStyle kButtonTextStyle = TextStyle(
   color: Colors.white,
-  fontSize: getProportionateScreenWidth(14),
+  fontSize: 14,
   fontWeight: FontWeight.bold,
 );
 
 final EdgeInsets kTextFieldPadding = EdgeInsets.symmetric(
   horizontal: defaultPadding,
-  vertical: getProportionateScreenHeight(defaultPadding),
+  vertical: defaultPadding,
 );
 
 // Text Field Decoration

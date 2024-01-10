@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../components/small_dot.dart';
 
+import '../../../components/small_dot.dart';
 import '../../../constants.dart';
-import '../../../size_config.dart';
 
 class FeaturedItemCard extends StatelessWidget {
   const FeaturedItemCard({
@@ -29,7 +28,7 @@ class FeaturedItemCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(5.0),
         child: SizedBox(
-          width: getProportionateScreenWidth(140),
+          width: 140,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -43,7 +42,7 @@ class FeaturedItemCard extends StatelessWidget {
                   ),
                 ),
               ),
-              const VerticalSpacing(of: 5),
+              const SizedBox(height: 8),
               Text(
                 title,
                 style: Theme.of(context)
@@ -51,17 +50,17 @@ class FeaturedItemCard extends StatelessWidget {
                     .bodyMedium
                     ?.copyWith(color: titleColor, fontWeight: FontWeight.w500),
               ),
-              const VerticalSpacing(of: 5),
+              const SizedBox(height: 8),
               Row(
                 children: [
                   Text(
                     priceRange,
                     style: textStyle,
                   ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: getProportionateScreenWidth(5)),
-                    child: const SmallDot(),
+                  const Padding(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: defaultPadding / 2),
+                    child: SmallDot(),
                   ),
                   Text(foodType, style: textStyle)
                 ],

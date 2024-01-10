@@ -25,7 +25,7 @@ class RatingWithCounter extends StatelessWidget {
               .labelSmall!
               .copyWith(color: titleColor.withOpacity(0.74)),
         ),
-        const HorizontalSpacing(of: 5),
+        const SizedBox(width: 8),
         SvgPicture.asset(
           "assets/icons/rating.svg",
           height: 20,
@@ -35,7 +35,7 @@ class RatingWithCounter extends StatelessWidget {
             BlendMode.srcIn,
           ),
         ),
-        const HorizontalSpacing(of: 5),
+        const SizedBox(width: 8),
         Text("$numOfRating+ Ratings",
             style: Theme.of(context)
                 .textTheme

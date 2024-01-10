@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../constants.dart';
-import '../../../size_config.dart';
 import '../../price_range_and_food_type.dart';
 import '../../rating_with_counter.dart';
 import '../../small_dot.dart';
@@ -58,7 +57,7 @@ class RestaurantInfoBigCard extends StatelessWidget {
                   BlendMode.srcIn,
                 ),
               ),
-              const HorizontalSpacing(of: 5),
+              const SizedBox(width: 8),
               Text(
                 "$deliveryTime Min",
                 style: Theme.of(context).textTheme.labelSmall,
@@ -69,8 +68,8 @@ class RestaurantInfoBigCard extends StatelessWidget {
               ),
               SvgPicture.asset(
                 "assets/icons/delivery.svg",
-                height: getProportionateScreenWidth(20),
-                width: getProportionateScreenWidth(20),
+                height: 20,
+                width: 20,
                 colorFilter: ColorFilter.mode(
                   Theme.of(context)
                       .textTheme
@@ -80,7 +79,7 @@ class RestaurantInfoBigCard extends StatelessWidget {
                   BlendMode.srcIn,
                 ),
               ),
-              const HorizontalSpacing(of: 5),
+              const SizedBox(width: 8),
               Text(isFreeDelivery ? "Free" : "Paid",
                   style: Theme.of(context).textTheme.labelSmall),
             ],

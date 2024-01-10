@@ -30,12 +30,12 @@ class DetailsScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: SafeArea(
+      body: const SafeArea(
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: defaultPadding / 2),
+              SizedBox(height: defaultPadding / 2),
               RestaurantInfo(),
               SizedBox(height: defaultPadding),
               FeaturedItems(),

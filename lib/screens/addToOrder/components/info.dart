@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../components/price_range_and_food_type.dart';
 
+import '../../../components/price_range_and_food_type.dart';
 import '../../../constants.dart';
-import '../../../size_config.dart';
 
 class Info extends StatelessWidget {
   const Info({
@@ -29,12 +28,12 @@ class Info extends StatelessWidget {
             children: [
               Text("Cookie Sandwich",
                   style: Theme.of(context).textTheme.titleLarge),
-              const VerticalSpacing(of: 5),
+              const SizedBox(height: 8),
               Text(
                 "Shortbread, chocolate turtle cookies, and red velvet. 8 ounces cream cheese, softened.",
                 style: Theme.of(context).textTheme.bodyMedium,
               ),
-              const VerticalSpacing(of: 10),
+              const SizedBox(height: 16),
               const PriceRangeAndFoodtype(
                 foodType: ["Chinese", "American", "Deshi food"],
               ),

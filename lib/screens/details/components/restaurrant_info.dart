@@ -81,7 +81,7 @@ class DeliveryInfo extends StatelessWidget {
           width: 20,
           color: primaryColor,
         ),
-        const HorizontalSpacing(of: 10),
+        const SizedBox(width: 8),
         Text.rich(
           TextSpan(
             text: "$text\n",

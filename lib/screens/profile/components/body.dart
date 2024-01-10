@@ -22,7 +22,7 @@ class Body extends StatelessWidget {
                 "Update your settings like notifications, payments, profile edit etc.",
                 style: Theme.of(context).textTheme.bodyMedium,
               ),
-              const VerticalSpacing(of: 10),
+              const SizedBox(height: 16),
               ProfileMenuCard(
                 svgSrc: "assets/icons/profile.svg",
                 title: "Profile Information",
@@ -96,7 +96,7 @@ class ProfileMenuCard extends StatelessWidget {
                 width: 24,
                 color: titleColor.withOpacity(0.64),
               ),
-              const HorizontalSpacing(of: 10),
+              const SizedBox(width: 8),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -106,7 +106,7 @@ class ProfileMenuCard extends StatelessWidget {
                       maxLines: 1,
                       style: Theme.of(context).textTheme.labelLarge,
                     ),
-                    const VerticalSpacing(of: 5),
+                    const SizedBox(height: 8),
                     Text(
                       subTitle!,
                       maxLines: 1,
@@ -118,7 +118,7 @@ class ProfileMenuCard extends StatelessWidget {
                   ],
                 ),
               ),
-              const HorizontalSpacing(of: 10),
+              const SizedBox(width: 8),
               const Icon(
                 Icons.arrow_forward_ios_outlined,
                 size: 20,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodly_ui/constants.dart';
 
 import '../../size_config.dart';
 import '../dot_indicators.dart';
@@ -19,8 +20,8 @@ class BigCardImageSlideScalton extends StatelessWidget {
           ),
         ),
         Positioned(
-          bottom: getProportionateScreenWidth(15),
-          right: getProportionateScreenWidth(15),
+          bottom: defaultPadding,
+          right: defaultPadding,
           child: Row(
             children: List.generate(4, (index) => const DotIndicator()),
           ),

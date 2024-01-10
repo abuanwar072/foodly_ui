@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
+
 import '../../components/cards/big/big_card_image_slide.dart';
 import '../../components/cards/big/restaurant_info_big_card.dart';
 import '../../components/section_title.dart';
 import '../../constants.dart';
 import '../../demoData.dart';
 import '../../screens/filter/filter_screen.dart';
-import '../../size_config.dart';
-
 import '../details/details_screen.dart';
 import '../featured/featurred_screen.dart';
 import 'components/medium_card_list.dart';
@@ -74,10 +73,10 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: defaultPadding),
               const MediumCardList(),
-              const VerticalSpacing(of: 25),
+              const SizedBox(height: 20),
               // Banner
               const PromotionBanner(),
-              const VerticalSpacing(of: 25),
+              const SizedBox(height: 20),
               SectionTitle(
                 title: "Best Pick",
                 press: () => Navigator.push(
@@ -87,11 +86,11 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const VerticalSpacing(of: 15),
+              const SizedBox(height: 16),
               const MediumCardList(),
-              const VerticalSpacing(of: 25),
+              const SizedBox(height: 20),
               SectionTitle(title: "All Restaurants", press: () {}),
-              const VerticalSpacing(of: 15),
+              const SizedBox(height: 16),
 
               // Demo list of Big Cards
               ...List.generate(

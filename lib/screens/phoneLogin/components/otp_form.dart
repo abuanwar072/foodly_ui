@@ -118,7 +118,7 @@ class _OtpFormState extends State<OtpForm> {
               ),
             ],
           ),
-          const VerticalSpacing(of: 40),
+          const SizedBox(height: defaultPadding * 2),
           // Continue Button
           PrimaryButton(
             text: "Continue",

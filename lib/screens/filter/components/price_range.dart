@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants.dart';
-import '../../../size_config.dart';
 import '../../../components/section_title.dart';
+import '../../../constants.dart';
 
 class PriceRange extends StatelessWidget {
   const PriceRange({super.key});
@@ -27,8 +26,7 @@ class PriceRange extends StatelessWidget {
                 // For demo i'm using length 5
                 5, // Price limit
                 (index) => Padding(
-                  padding: EdgeInsets.only(
-                      right: getProportionateScreenWidth(defaultPadding)),
+                  padding: const EdgeInsets.only(right: defaultPadding),
                   child: RoundedButton(
                     index: index,
                     isActive: index == 2, // for demo just select 3rd item
@@ -76,9 +74,10 @@ class RoundedButton extends StatelessWidget {
         child: Text(
           "\$" * (index + 1),
           style: TextStyle(
-              fontWeight: FontWeight.normal,
-              color: isActive ? Colors.white : titleColor,
-              fontSize: getProportionateScreenWidth(14)),
+            fontWeight: FontWeight.normal,
+            color: isActive ? Colors.white : titleColor,
+            fontSize: 14,
+          ),
         ),
       ),
     );

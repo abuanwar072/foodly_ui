@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodly_ui/constants.dart';
 
 import '../../../size_config.dart';
 import '../../dot_indicators.dart';
@@ -36,8 +37,8 @@ class _BigCardImageSlideState extends State<BigCardImageSlide> {
                 BigCardImage(image: widget.images[index]),
           ),
           Positioned(
-            bottom: getProportionateScreenWidth(15),
-            right: getProportionateScreenWidth(15),
+            bottom: defaultPadding,
+            right: defaultPadding,
             child: Row(
               children: List.generate(
                 widget.images.length,

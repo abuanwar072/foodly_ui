@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
-import '../../size_config.dart';
 
 class PrimaryButton extends StatelessWidget {
   final String text;
@@ -15,7 +14,7 @@ class PrimaryButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     EdgeInsets verticalPadding =
-        EdgeInsets.symmetric(vertical: getProportionateScreenWidth(15));
+        const EdgeInsets.symmetric(vertical: defaultPadding);
     return SizedBox(
       width: double.infinity,
       child: Platform.isIOS

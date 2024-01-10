@@ -31,7 +31,7 @@ class OnboardContent extends StatelessWidget {
               .titleLarge!
               .copyWith(fontWeight: FontWeight.bold),
         ),
-        const VerticalSpacing(of: 8),
+        const SizedBox(height: 8),
         Text(
           text!,
           style: Theme.of(context).textTheme.bodyMedium,

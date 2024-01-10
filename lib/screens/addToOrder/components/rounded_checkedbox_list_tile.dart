@@ -27,7 +27,7 @@ class RoundedCheckboxListTile extends StatelessWidget {
             child: Row(
               children: [
                 CircleCheckBox(isActive: isActive),
-                const HorizontalSpacing(of: 10),
+                const SizedBox(width: 8),
                 Text(
                   text,
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(

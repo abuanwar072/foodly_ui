@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
-import '../../size_config.dart';
 
 class FittedButton extends StatelessWidget {
   const FittedButton({
@@ -19,8 +18,7 @@ class FittedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: TextButton.styleFrom(
-        padding: EdgeInsets.symmetric(
-            horizontal: getProportionateScreenWidth(defaultPadding) * 1.5),
+        padding: EdgeInsets.symmetric(horizontal: defaultPadding * 1.5),
         backgroundColor: isActive! ? primaryColor : const Color(0xFFF1F1F1),
       ),
       onPressed: press,

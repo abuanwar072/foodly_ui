@@ -15,11 +15,12 @@ class RoundedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: getProportionateScreenWidth(54),
-      width: getProportionateScreenWidth(54),
+      height: 56,
+      width: 56,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.zero, backgroundColor: const Color(0xFFF8F8F8),
+          padding: EdgeInsets.zero,
+          backgroundColor: const Color(0xFFF8F8F8),
           shape: RoundedRectangleBorder(
             borderRadius: const BorderRadius.all(Radius.circular(100)),
             side: BorderSide(

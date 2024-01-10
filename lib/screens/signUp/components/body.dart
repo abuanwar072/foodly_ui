@@ -2,11 +2,10 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../constants.dart';
-import '../../../components/welcome_text.dart';
-import '../../auth/sign_in_screen.dart';
-import '../../../size_config.dart';
 import '../../../components/buttons/socal_button.dart';
+import '../../../components/welcome_text.dart';
+import '../../../constants.dart';
+import '../../auth/sign_in_screen.dart';
 import 'sign_up_form.dart';
 
 class Body extends StatelessWidget {
@@ -28,7 +27,7 @@ class Body extends StatelessWidget {
 
               // Sign Up Form
               const SignUpForm(),
-              const VerticalSpacing(of: 20),
+              const SizedBox(height: 16),
 
               // Already have account
               Center(
@@ -55,7 +54,7 @@ class Body extends StatelessWidget {
                   ),
                 ),
               ),
-              const VerticalSpacing(of: 20),
+              const SizedBox(height: 16),
               Center(
                 child: Text(
                   "By Signing up you agree to our Terms \nConditions & Privacy Policy.",
@@ -63,9 +62,9 @@ class Body extends StatelessWidget {
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),
               ),
-              const VerticalSpacing(of: 15),
+              const SizedBox(height: 16),
               kOrText,
-              const VerticalSpacing(of: 15),
+              const SizedBox(height: 16),
 
               // Facebook
               SocalButton(
@@ -77,7 +76,7 @@ class Body extends StatelessWidget {
                   color: const Color(0xFF395998),
                 ),
               ),
-              const VerticalSpacing(of: 15),
+              const SizedBox(height: 16),
 
               // Google
               SocalButton(

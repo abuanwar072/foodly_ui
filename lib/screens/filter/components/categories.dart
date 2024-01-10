@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../../components/section_title.dart';
 import '../../../constants.dart';
-import '../../../size_config.dart';
 
 class Categories extends StatefulWidget {
   const Categories({
@@ -24,7 +23,7 @@ class _CategoriesState extends State<Categories> {
           press: () {},
           isMainSection: false,
         ),
-        const VerticalSpacing(of: 20),
+        const SizedBox(height: defaultPadding),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
           child: Wrap(
