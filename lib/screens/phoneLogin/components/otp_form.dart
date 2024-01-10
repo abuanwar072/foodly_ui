@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foodly_ui/screens/entry_point.dart';
+import 'package:foodly_ui/entry_point.dart';
 
 import 'package:form_field_validator/form_field_validator.dart';
 

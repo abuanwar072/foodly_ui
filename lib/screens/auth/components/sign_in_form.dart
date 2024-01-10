@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:foodly_ui/screens/entry_point.dart';
+import 'package:foodly_ui/screens/findRestaurants/find_restaurants_screen.dart';
 
-import '../../../constants.dart';
 import '../../../components/buttons/primary_button.dart';
+import '../../../constants.dart';
 import '../forgot_password_screen.dart';
 
 class SignInForm extends StatefulWidget {
@@ -82,7 +82,7 @@ class _SignInFormState extends State<SignInForm> {
                 Navigator.pushAndRemoveUntil(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const EntryPoint(),
+                    builder: (context) => const FindRestaurantsScreen(),
                   ),
                   (_) => true,
                 );
