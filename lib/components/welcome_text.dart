@@ -14,7 +14,10 @@ class WelcomeText extends StatelessWidget {
         const SizedBox(height: defaultPadding),
         Text(
           title,
-          style: Theme.of(context).textTheme.headlineLarge,
+          style: Theme.of(context)
+              .textTheme
+              .titleLarge!
+              .copyWith(fontWeight: FontWeight.w600),
         ),
         const SizedBox(height: defaultPadding / 2),
         Text(text, style: Theme.of(context).textTheme.bodyMedium),

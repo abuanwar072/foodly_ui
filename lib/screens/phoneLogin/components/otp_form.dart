@@ -52,8 +52,8 @@ class _OtpFormState extends State<OtpForm> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               SizedBox(
-                width: getProportionateScreenWidth(50),
-                height: getProportionateScreenWidth(50),
+                width: 48,
+                height: 48,
                 child: TextFormField(
                   onChanged: (value) {
                     if (value.length == 1) _pin2Node!.requestFocus();
@@ -69,8 +69,8 @@ class _OtpFormState extends State<OtpForm> {
                 ),
               ),
               SizedBox(
-                width: getProportionateScreenWidth(50),
-                height: getProportionateScreenWidth(50),
+                width: 48,
+                height: 48,
                 child: TextFormField(
                   onChanged: (value) {
                     if (value.length == 1) _pin3Node!.requestFocus();
@@ -85,8 +85,8 @@ class _OtpFormState extends State<OtpForm> {
                 ),
               ),
               SizedBox(
-                width: getProportionateScreenWidth(50),
-                height: getProportionateScreenWidth(50),
+                width: 48,
+                height: 48,
                 child: TextFormField(
                   onChanged: (value) {
                     if (value.length == 1) _pin4Node!.requestFocus();
@@ -101,8 +101,8 @@ class _OtpFormState extends State<OtpForm> {
                 ),
               ),
               SizedBox(
-                width: getProportionateScreenWidth(50),
-                height: getProportionateScreenWidth(50),
+                width: 48,
+                height: 48,
                 child: TextFormField(
                   onChanged: (value) {
                     if (value.length == 1) _pin4Node!.unfocus();
