@@ -4,7 +4,10 @@ import 'package:foodly_ui/constants.dart';
 import 'package:foodly_ui/screens/onboarding/onboarding_scrreen.dart';
 
 void main() {
-  runApp(DevicePreview(builder: (context) => const MyApp()));
+  runApp(DevicePreview(
+    enabled: false,
+    builder: (context) => const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
