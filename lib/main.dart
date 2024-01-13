@@ -5,7 +5,6 @@ import 'package:foodly_ui/screens/onboarding/onboarding_scrreen.dart';
 
 void main() {
   runApp(DevicePreview(
-    enabled: false,
     builder: (context) => const MyApp(),
   ));
 }
