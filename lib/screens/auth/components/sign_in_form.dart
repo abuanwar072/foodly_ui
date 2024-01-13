@@ -72,9 +72,8 @@ class _SignInFormState extends State<SignInForm> {
           const SizedBox(height: defaultPadding),
 
           // Sign In Button
-          PrimaryButton(
-            text: "Sign In",
-            press: () {
+          ElevatedButton(
+            onPressed: () {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
 
@@ -88,7 +87,8 @@ class _SignInFormState extends State<SignInForm> {
                 );
               }
             },
-          )
+            child: Text("Sign in"),
+          ),
         ],
       ),
     );
